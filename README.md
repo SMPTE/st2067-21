@@ -1,4 +1,4 @@
-# ST 2067-21:2020 - Interoperable Master Format — Application #2E
+# ST 2067-21 - Interoperable Master Format — Application #2E
 
 _This repository is *public*._
 
