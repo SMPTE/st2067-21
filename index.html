@@ -1,0 +1,2675 @@
+<!DOCTYPE html><html><head itemscope="itemscope" itemtype="http://smpte.org/standards/documents">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+
+    <meta itemprop="pubType" content="ST">
+    <meta itemprop="pubNumber" content="2067">
+    <meta itemprop="pubPart" content="21">
+    <meta itemprop="pubState" content="pub">
+    <meta itemprop="pubStage" content="CD">
+    <meta itemprop="pubConfidential" content="no">
+    <meta itemprop="pubTC" content="35PM">
+    <meta itemprop="pubSuiteTitle" content="Interoperable Master Format">
+    <meta itemprop="pubDateTime" content="2025-06-17">
+    <meta itemprop="pubRevisionOf" content="SMPTE ST 2067-21:2023">
+
+    <title>Application #2E</title>
+  <link type="image/png" rel="icon" href="static/smpte-icon.png"><style>html {
+  font-size: calc(1.1 * 1em);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  max-width: 54em;
+  margin: auto;
+}
+
+/* front matter */
+
+h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  line-height: 110%;
+}
+
+#doc-designator {
+  font-size: 1.3rem;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#doc-number-block {
+  margin-bottom: 2rem;
+}
+
+#revision-text {
+  font-size: 1rem;
+  text-align: right;
+  font-weight: bold;
+}
+
+#long-doc-type {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#long-pub-stage {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 1rem;
+}
+
+#doc-status {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+#smpte-logo {
+  float: right;
+  width: 200px;
+  padding-left: 1rem;
+}
+
+#doc-version-string {
+  color: #606060;
+  font-size: 0.8em;
+}
+
+/* headers */
+
+
+h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+h2 span.heading-label {
+  margin-right: 0.5em;
+}
+
+
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+h3 span.heading-label {
+  margin-right: 0.5em;
+}
+
+h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+h4 span.heading-label {
+  margin-right: 0.5em;
+}
+
+h5 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  font-size: 1rem;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+h5 span.heading-label {
+  margin-right: 0.5em;
+}
+
+h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  font-size: 1rem;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+h6 span.heading-label {
+  margin-right: 0.5em;
+}
+
+/* foreword */
+
+#sec-foreword {
+  break-before: page;
+}
+
+/* scope */
+
+#sec-scope {
+  break-before: page;
+}
+
+/* bibliography */
+
+#sec-bibliography {
+  break-before: page;
+}
+
+/* annexes */
+
+section.annex {
+  break-before: page;
+}
+
+section.annex > h2 {
+  text-align: left;
+}
+
+.annex-cat {
+  font-weight: normal;
+}
+
+/* definition lists */
+
+dl {
+  margin-left: 1em;
+}
+
+/* terms and definitions */
+
+#sec-terms-and-definitions dd {
+  margin-left: 0;
+}
+
+#sec-terms-and-definitions dl {
+  margin-left: 0;
+}
+
+
+dt {
+  font-weight: bold;
+}
+
+dd + dt {
+  margin-top: 1em;
+}
+
+dt + dd {
+  margin-top: 0.25em;
+}
+
+dfn {
+  font-style: normal;
+}
+
+dd.term-source {
+  font-size: 0.8rem;
+}
+
+/* quotes */
+
+q {
+  font-style: italic;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+/* note and example */
+
+.note, .example {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+/* lists */
+
+li {
+  margin-top: 0.75em;
+}
+
+/* heading links */
+
+a.heading-link {
+  visibility: hidden;
+  text-decoration: none;
+  font-size: 0.5em;
+  padding-left: 0.5em;
+  position: relative;
+  bottom: 0.25em;
+}
+
+@media only screen {
+  h2:hover .heading-link {
+    visibility: visible;
+  }
+  h3:hover .heading-link {
+    visibility: visible;
+  }
+  h4:hover .heading-link {
+    visibility: visible;
+  }
+  h5:hover .heading-link {
+    visibility: visible;
+  }
+  h6:hover .heading-link {
+    visibility: visible;
+  }
+}
+
+/* table of contents */
+
+section#sec-toc ol {
+  list-style-type: none;
+  margin: 0.25rem 0 0.25rem 0;
+}
+
+section#sec-toc li {
+  list-style-type: none;
+  margin: 0;
+}
+
+section#sec-toc span.heading-number {
+  display: inline-block;
+  width: 10rem;
+}
+
+/* tables */
+
+table {
+  font-size: 0.8rem;
+  border-collapse: collapse;
+  margin: auto;
+  min-width: 40%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {
+  background-color: lightgrey;
+  font-weight: bold;
+}
+
+thead {
+  text-align: center;
+}
+
+tbody {
+  text-align: left;
+}
+
+td.center-cell {
+  text-align: center;
+}
+
+table.col-1-center tr td:nth-child(1) {
+  text-align: center;
+}
+
+table.col-2-center tr td:nth-child(2) {
+  text-align: center;
+}
+
+table.col-3-center tr td:nth-child(3) {
+  text-align: center;
+}
+
+table.col-4-center tr td:nth-child(4) {
+  text-align: center;
+}
+
+table.col-5-center tr td:nth-child(5) {
+  text-align: center;
+}
+
+table.col-6-center tr td:nth-child(6) {
+  text-align: center;
+}
+
+table.col-7-center tr td:nth-child(7) {
+  text-align: center;
+}
+
+table.col-8-center tr td:nth-child(8) {
+  text-align: center;
+}
+
+table > caption {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+table, tr, thead, tbody, tfoot {
+  break-inside: avoid;
+}
+
+thead, thead tr {
+  break-after: avoid;
+}
+
+/* images */
+
+figure > img {
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* figures */
+
+figcaption {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+  break-before: avoid;
+  break-inside: avoid;
+}
+
+figure {
+  margin-top: 2em;
+}
+
+/* formulae */
+
+div.formula {
+  display: table;
+  width: 100%;
+}
+
+div.formula > math {
+  width: 90%;
+  text-align: center;
+}
+
+div.formula > .heading-label {
+  display: table-cell;
+  text-align: right;
+}
+
+/* references */
+
+#sec-bibliography ul, #sec-normative-references ul {
+  list-style-type: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+#sec-bibliography li, #sec-normative-references li {
+  margin-top: 1rem;
+}
+
+/* additional elements */
+
+#sec-elements ol {
+  list-style-type: none;
+}
+
+#sec-elements {
+  break-before: page;
+}
+
+/* links */
+
+.ext-ref {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.dfn-ref {
+    text-decoration: underline blue dotted;
+    color: black;
+}
+
+/* code */
+
+pre {
+  padding: 0.5em 0.5em;
+
+  background-color: lightgrey;
+  border-radius: 0.5rem;
+
+  font-size: 0.8rem;
+  font-family: Consolas, Monaco, monospace;
+
+  line-height: 1.4;
+
+  white-space: pre-wrap;
+}
+
+code {
+  font-family: Consolas, Monaco, monospace;
+  padding: 0.1rem;
+}
+
+code:hover {
+  background-color: #ededed;
+  border-radius: 0.2rem;
+}
+
+/* warning */
+
+#sec-draft-warning {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 2px lightblue solid;
+  text-align: justify;
+}
+
+/* print media */
+
+@media print {
+
+  #sec-toc ol li a::after {
+    content: target-counter(attr(href), page);
+    float: right;
+  }
+
+  #doc-designator {
+    string-set: pub-designator content(text);
+  }
+
+  #doc-status {
+    string-set: pub-status content(text);
+  }
+
+  #copyright-text {
+    string-set: doc-copyright content(text);
+  }
+
+  #long-pub-stage {
+    string-set: doc-pub-stage content(text);
+  }
+
+  #sec-elements a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  @page:first {
+    @top-right {
+      content: "";
+    }
+
+    @top-left {
+      content: "";
+    }
+  }
+
+  @page {
+    @top-right {
+      content: string(pub-designator);
+      width: 20rem;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    @top-left {
+      content: string(doc-pub-stage);
+      width: 20rem;
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: red;
+    }
+
+    @bottom-left {
+      content: string(doc-copyright);
+      width: 35em;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+      width: 20rem;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    margin: 0.75in;
+    padding: 0.1in 0;
+  }
+
+
+  html {
+    font-size: 12px;
+    max-width: none;
+  }
+
+}</style></head>
+  <body><section class="unnumbered" id="sec-front-matter"><div id="doc-number-block">
+<div id="doc-designator" itemscope="itemscope" itemtype="http://purl.org/dc/elements/1.1/">
+<span itemprop="publisher">SMPTE</span>&nbsp;<span id="doc-type">ST</span>&nbsp;<span itemprop="doc-number" id="doc-number">2067</span>-<span itemprop="doc-part" id="doc-part">21</span></div>
+<div id="revision-text">Revision of <span id="revision-of">SMPTE ST 2067-21:2023</span></div>
+</div>
+<div id="long-pub-stage">Committee Draft</div>
+<img id="smpte-logo" src="static/smpte-logo.png" alt="SMPTE logo">
+<div id="long-doc-type">SMPTE Standard</div>
+<h1>Interoperable Master Format — Application #2E</h1>
+<div id="doc-status">Approved - 2025-06-17</div>
+<p><span id="copyright-text">Copyright © <span id="doc-copyright-year">2025</span>,
+Society of Motion Picture and Television Engineers</span>.
+All rights reserved. No part of this material may be reproduced, by any means whatsoever,
+without the prior written permission of the Society of Motion Picture and Television Engineers.</p>
+<hr>
+
+<div id="sec-draft-warning">
+<strong>Warning:</strong> This document is an unpublished work under development and shall not be referred
+to as a SMPTE Standard,
+Recommended Practice, or Engineering Guideline. It is distributed for review and comment; distribution does not constitute
+publication. Recipients of this document are strongly encouraged to submit, with their comments, notification of any relevant
+patent rights of which they are aware and to provide supporting documentation.
+</div>
+</section><section id="sec-toc" class="unnumbered"><h2>Table of contents<a class="heading-link" href="#sec-toc">🔗</a></h2><ol><li><a href="#sec-foreword">Foreword</a></li><li><a href="#sec-scope">1 Scope</a></li><li><a href="#sec-conformance">2 Conformance</a></li><li><a href="#sec-normative-references">3 Normative references</a></li><li><a href="#sec-terms-and-definitions">4 Terms and definitions</a></li><li><a href="#sec-overall-clause">5 Overall</a><ol><li><a href="#sec-overall-general-sub-clause">5.1 General</a></li><li><a href="#sec-overall-format-sub-clause">5.2 Format</a></li><li><a href="#sec-overall-shim-parameters-sub-clause">5.3 Shim Parameters</a></li><li><a href="#sec-overall-xml-schema-and-namespace-sub-clause">5.4 XML Schema and Namespace</a></li></ol></li><li><a href="#sec-image-essence-clause">6 Image Essence</a><ol><li><a href="#sec-image-essence-general-sub-clause">6.1 General</a></li><li><a href="#sec-image-essence-constraints-sub-clause">6.2 Constraints</a><ol><li><a href="#sec-image-essence-constraints-general-sub-clause">6.2.1 General</a></li><li><a href="#sec-image-essence-constraints-frame-dimensions-sub-clause">6.2.2 Frame Dimensions</a></li><li><a href="#sec-image-essence-constraints-frame-structure-sub-clause">6.2.3 Frame Structure</a><ol><li><a href="#sec-image-essence-constraints-frame-structure-general-sub-clause">6.2.3.1 General</a></li><li><a href="#sec-image-essence-constraints-frame-structure-progressive-structure-sub-clause">6.2.3.2 Progressive Structure</a></li><li><a href="#sec-image-essence-constraints-frame-structure-interlaced-structure-sub-clause">6.2.3.3 Interlaced Structure</a></li><li><a href="#sec-image-essence-constraints-frame-structure-frame-size-sub-clause">6.2.3.4 Frame Size</a></li><li><a href="#sec-image-essence-constraints-frame-structure-frame-rate-sub-clause">6.2.3.5 Frame Rate</a></li><li><a href="#sec-image-essence-constraints-frame-structure-color-components-sub-clause">6.2.3.6 Color Components</a></li><li><a href="#sec-image-essence-constraints-frame-structure-pixel-bit-depth-sub-clause">6.2.3.7 Pixel Bit Depth</a></li><li><a href="#sec-image-essence-constraints-frame-structure-sampling-sub-clause">6.2.3.8 Sampling</a></li><li><a href="#sec-image-essence-constraints-frame-structure-stereoscopic-and-monoscopic-sub-clause">6.2.3.9 Stereoscopic and Monoscopic Image Essence</a></li></ol></li></ol></li><li><a href="#sec-image-essence-constraints-colorimetry-sub-clause">6.3 Colorimetry</a></li><li><a href="#sec-image-essence-constraints-quantization-sub-clause">6.4 Quantization</a></li><li><a href="#sec-image-essence-encoding-profile">6.5 Encoding Profile</a><ol><li><a href="#sec-image-essence-encoding-profile-single-codestream">6.5.1 Single Codestream</a></li><li><a href="#sec-image-essence-encoding-profile-jpeg2000-encoding-constraints">6.5.2 JPEG 2000 Encoding Constraints</a></li><li><a href="#sec-image-essence-encoding-profile-component-ordering">6.5.3 Component Ordering</a></li></ol></li></ol></li><li><a href="#sec-image-track-files-clause">7 Image Track Files</a><ol><li><a href="#sec-image-track-files-essence-sub-clause">7.1 Essence</a><ol><li><a href="#sec-image-track-files-essence-general-sub-clause">7.1.1 General</a></li><li><a href="#sec-image-track-files-essence-wrapping-sub-clause">7.1.2 Wrapping</a></li></ol></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-sub-clause">7.2 Generic Picture Essence Descriptor</a><ol><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-general-sub-clause">7.2.1 General</a><ol><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-general-general-sub-clause">7.2.1.1 General</a></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-general-stored-width-and-stored-height-sub-clause">7.2.1.2 Stored Width and Stored Height</a></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-general-aspect-ratio-sub-clause">7.2.1.3 Aspect Ratio</a></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-general-frame-layout-sub-clause">7.2.1.4 Frame Layout</a></li></ol></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-transfer-characteristic-sub-clause">7.2.2 Transfer Characteristic</a></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-coding-equations-sub-clause">7.2.3 Coding Equations</a></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-color-primaries-sub-clause">7.2.4 Color Primaries</a></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-picture-essence-coding-sub-clause">7.2.5 Picture Essence Coding</a></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-alternative-center-cuts-coding-sub-clause">7.2.6 Alternative Center Cuts</a></li><li><a href="#sec-image-track-files-generic-picture-essence-descriptor-mastering-display-color-volume-metadata-coding-sub-clause">7.2.7 Mastering Display Color Volume Metadata</a></li></ol></li><li><a href="#sec-image-track-files-rgba-picture-essence-descriptor">7.3 RGBA Picture Essence Descriptor</a><ol><li><a href="#sec-image-track-files-rgba-picture-essence-descriptor-general">7.3.1 General</a></li><li><a href="#sec-image-track-files-rgba-picture-essence-descriptor-component-max-ref-and-component-min-ref">7.3.2 Component Max Ref and Component Min Ref</a></li></ol></li><li><a href="#sec-image-track-files-cdci-picture-essence-descriptor">7.4 CDCI Picture Essence Descriptor</a><ol><li><a href="#sec-image-track-files-cdci-picture-essence-descriptor-general">7.4.1 General</a></li><li><a href="#sec-image-track-files-cdci-picture-essence-descriptor-horizontal-subsampling">7.4.2 Horizontal Subsampling</a></li><li><a href="#sec-image-track-files-cdci-picture-essence-descriptor-black-ref-level-white-ref-level-and-color-range-values">7.4.3 Black Ref Level, White Ref Level and Color Range Values</a></li></ol></li><li><a href="#sec-image-track-files-jpeg2000-picture-sub-descriptor">7.5 JPEG 2000 Picture Sub Descriptor</a><ol><li><a href="#sec-image-track-files-jpeg2000-picture-sub-descriptor-general">7.5.1 General</a></li><li><a href="#sec-image-track-files-jpeg2000-picture-sub-descriptor-J2CLayout">7.5.2 J2CLayout</a></li></ol></li></ol></li><li><a href="#sec-composition-clause">8 Composition</a><ol><li><a href="#sec-composition-application-identification-subclause">8.1 ApplicationIdentification</a></li><li><a href="#sec-composition-homogeneous-image-essence-subclause">8.2 Homogeneous Image Essence</a></li><li><a href="#sec-composition-virtual-tracks-subclause">8.3 Virtual Tracks</a><ol><li><a href="#sec-composition-virtual-tracks-main-image-virtual-track-subclause">8.3.1 Main Image Virtual Track</a></li><li><a href="#sec-composition-virtual-tracks-segment-duration-subclause">8.3.2 Segment Duration</a></li><li><a href="#sec-composition-virtual-tracks-maxcll-and-maxfall">8.3.3 MaxCLL and MaxFALL</a></li></ol></li></ol></li><li><a href="#sec-itur-bt2020-transfer-characteristic-label">Annex A
+ITU-R BT.2020 Transfer Characteristic Label (Normative)</a></li><li><a href="#sec-mastering-display-color-volume-metadata">Annex B
+Mastering Display Color Volume Metadata (Normative)</a><ol><li><a href="#sec-mastering-display-color-volume-metadata-general">B.1 General</a></li><li><a href="#sec-mastering-display-color-volume-metadata-mastering-display-primaries">B.2 Mastering Display Primaries</a></li><li><a href="#sec-mastering-display-color-volume-metadata-mastering-display-white-point-chromaticty">B.3 Mastering Display White Point Chromaticity</a></li><li><a href="#sec-mastering-display-color-volume-metadata-mastering-display-maximum-luminance">B.4 Mastering Display Maximum Luminance</a></li><li><a href="#sec-mastering-display-color-volume-metadata-mastering-display-minimum-luminance">B.5 Mastering Display Minimum Luminance</a></li><li><a href="#sec-mastering-display-color-volume-metadata-mastering-display-examples">B.6 Examples (Informative)</a></li></ol></li><li><a href="#sec-smpte-st2084-transfer-characteristic-label">Annex C
+SMPTE ST 2084 Transfer Characteristic Label (Normative)</a></li><li><a href="#sec-itur-bt2020-non-constant-luminance-coding-equations-label">Annex D
+ITU-R BT.2020 Non-Constant Luminance Coding Equations Label (Normative)</a></li><li><a href="#sec-recommended-selection-of-jpeg2000-profiles">Annex E
+Recommended selection of JPEG 2000 Profiles (Informative)</a></li><li><a href="#sec-additional-jpeg2000-picture-essence-compression-labels">Annex F
+Additional JPEG 2000 Picture Essence Compression Labels (Normative)</a></li><li><a href="#sec-image-frame-and-active-area-rectangle-examples">Annex G
+Image Frame And Active Area Rectangle Examples (Informative)</a></li><li><a href="#sec-isoiec-15444-15-htj2k-codestream-constraints">Annex H
+ISO/IEC 15444-15 HT-J2K Codestream Constraints (Normative)</a></li><li><a href="#sec-example-encoder-commands">Annex I
+Example JPEG 2000 encoder commands (Informative)</a><ol><li><a href="#sec-example-encoder-commands-general">I.1 General</a></li><li><a href="#sec-example-encoder-commands-kakadu">I.2 Kakadu</a></li><li><a href="#sec-example-encoder-commands-openjph">I.3 OpenJPH</a></li><li><a href="#sec-example-encoder-commands-openjpeg">I.4 OpenJPEG</a></li></ol></li><li><a href="#sec-elements">Additional elements</a></li><li><a href="#sec-bibliography">Bibliography</a></li></ol></section>
+
+    <section id="sec-foreword" class="unnumbered"><h2>Foreword<a class="heading-link" href="#sec-foreword">🔗</a></h2>
+<p>The Society of Motion Picture and Television Engineers (SMPTE) is an
+internationally-recognized standards developing organization. Headquartered
+and incorporated in the United States of America, SMPTE has members in over
+80 countries on six continents. SMPTE’s Engineering Documents, including
+Standards, Recommended Practices, and Engineering Guidelines, are prepared
+by SMPTE’s Technology Committees. Participation in these Committees is open
+to all with a bona fide interest in their work. SMPTE cooperates closely
+with other standards-developing organizations, including ISO, IEC and ITU.
+SMPTE Engineering Documents are drafted in accordance with the rules given
+in its Standards Operations Manual.</p> 
+
+<p>For more information, please visit
+<a href="https://www.smpte.org">www.smpte.org</a>.</p>
+
+
+<p>At the time of publication no notice had been received by SMPTE claiming patent
+rights essential to the implementation of this Engineering Document.
+However, attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights.
+SMPTE shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p>This document was prepared by Technology Committee 35PM.</p>
+      <p>The following summarizes the changes from the previous edition of this document:</p>
+      <ul>
+        <li>Adds 8K resolution support</li>
+        <li>Adds example JPEG 2000 encoder commands</li>
+      </ul>
+    
+</section>
+
+    <section id="sec-scope"><h2><span class="heading-label"><span class="heading-number">1</span> </span>Scope<a class="heading-link" href="#sec-scope">🔗</a></h2>
+      <p>This specification defines IMF Application #2E. It is a specialization of the IMF Framework. Application #2E is meant for studio applications where a TV or movie title is transformed into multiple content versions (airline edits, special edition, languages...) that are made available to multiple consumer distribution channels (Internet, optical media, broadcast...) across multiple territories and over the span of many months to over a year. It uses image essence coded as a JPEG 2000 codestream and audio essence coded as linear PCM.</p>
+    </section><section id="sec-conformance">
+    <h2><span class="heading-label"><span class="heading-number">2</span> </span>Conformance<a class="heading-link" href="#sec-conformance">🔗</a></h2>
+    <p>Normative text is text that describes elements of the design that are indispensable or contains the
+    conformance language keywords: "shall", "should", or "may". Informative text is text that is potentially
+      helpful to the user, but not indispensable, and can be removed, changed, or added editorially without
+      affecting interoperability. Informative text does not contain any conformance keywords. </p>
+
+    <p>All text in this document is, by default, normative, except: the Introduction, any clause explicitly
+    labeled as "Informative" or individual paragraphs that start with "Note:" </p>
+
+  <p>The keywords "shall" and "shall not" indicate requirements strictly to be followed in order to conform to the
+  document and from which no deviation is permitted.</p>
+
+  <p>The keywords, "should" and "should not" indicate that, among several possibilities, one is recommended
+    as particularly suitable, without mentioning or excluding others; or that a certain course of action
+    is preferred but not necessarily required; or that (in the negative form) a certain possibility
+    or course of action is deprecated but not prohibited.</p>
+
+  <p>The keywords "may" and "need not" indicate courses of action permissible within the limits of the document. </p>
+
+  <p>The keyword "reserved" indicates a provision that is not defined at this time, shall not be used,
+    and may be defined in the future. The keyword "forbidden" indicates "reserved" and in addition
+    indicates that the provision will never be defined in the future.</p>
+
+  <p>A conformant implementation according to this document is one that
+      includes all mandatory provisions ("shall") and, if implemented, all recommended provisions
+      ("should") as described. A conformant implementation need not implement
+      optional provisions ("may") and need not implement them as described.</p>
+
+  <p>Unless otherwise specified, the order of precedence of the types of normative information in
+    this document shall be as follows: Normative prose shall be the authoritative definition;
+    tables shall be next; then formal languages; then figures; and then any other language forms.</p>
+    </section>
+
+    <section id="sec-normative-references"><h2><span class="heading-label"><span class="heading-number">3</span> </span>Normative references<a class="heading-link" href="#sec-normative-references">🔗</a></h2><p>The following documents are referred to in the text in such a way that some or all of
+     their content constitutes requirements of this document. For dated references, only the edition cited
+      applies. For undated references, the latest edition of the referenced document
+       (including any amendments) applies.</p>
+      <ul>
+        <li><cite id="bib-ST377-1">SMPTE ST 377-1:2011</cite>, Material Exchange Format (MXF) - File Format Specification</li>
+        
+        <li><cite id="bib-ST379-1">SMPTE ST 379-1:2009</cite>, Material Exchange Format (MXF) - MXF Generic Container</li>
+          
+        <li><cite id="bib-ST422">SMPTE ST 422:2019</cite>, Material Exchange Format — Mapping JPEG 2000 Codestreams into the MXF Generic Container</li>
+
+        <li><cite id="bib-ST2067-2">SMPTE ST 2067-2:2020</cite>, Interoperable Master Format - Core Constraints</li>
+        
+        <li><cite id="bib-ST2084">SMPTE ST 2084:2014</cite>, High Dynamic Range Electro-Optical Transfer Function of Mastering Reference Displays</li>
+
+        <li><cite id="bib-ST2086">SMPTE ST 2086:2018</cite>, Mastering Display Color Volume Metadata Supporting High Luminance and Wide Color Gamut Images</li>
+        
+        <li><cite id="bib-ST2113">SMPTE ST 2113:2018</cite>, Colorimetry of P3 Color Spaces</li>
+        
+        <li><cite id="bib-BT601">Recommendation ITU-R BT.601-7</cite>, Studio Encoding Parameters of Digital Television for Standard 4:3 and Wide-Screen 16:9 Aspect Ratios</li>
+
+        <li><cite id="bib-BT709">Recommendation ITU-R BT.709-6</cite>, Parameter Values for the HDTV Standards for Production and International Programme Exchange</li>
+
+        <li><cite id="bib-BT2020">Recommendation ITU-R BT.2020-2</cite>, Parameter Values for Ultra-High Definition Television Systems for Production and International Programme Exchange</li>
+
+        <li><cite id="bib-BT2100">Recommendation ITU-R BT.2100-2</cite>, Image parameter values for high dynamic range television for use in production and international programme exchange</li>
+
+        <li><cite id="bib-CTA861G">CTA 861-G</cite>, A DTV Profile for Uncompressed High Speed Digital Interfaces (November 2016)</li>
+        
+        <li><cite id="bib-xvYCC">IEC 61966-2-4 Edition 1.0</cite>, Multimedia Systems and Equipment - Colour Measurement and Management — Part 2-4: Colour Management — Extended-Gamut YCC Colour Space for Video Applications — xvYCC</li>
+
+        <li><cite id="bib-J2K1">ISO/IEC 15444-1:2019</cite>, Information Technology — JPEG 2000 Image Coding System: Core Coding System</li>
+        
+        <li><cite id="bib-HTJ2K">ISO/IEC 15444-15:2019</cite>, Information technology — JPEG 2000 image coding system — Part 15: High Throughput JPEG 2000</li>
+
+        <li><cite id="bib-ISO11664-3">ISO 11664-3:2012 (CIE S014-3/E:2011)</cite>, Colorimetry — Part 3: CIE Tristimulus Values</li>
+        
+        <li><cite id="bib-XML">World Wide Web Consortium (W3C) (2004, October 28). XML Schema Part 1: Structures (Second Edition)</cite></li>
+      
+      </ul>
+    </section><section id="sec-terms-and-definitions"><h2><span class="heading-label"><span class="heading-number">4</span> </span>Terms and definitions<a class="heading-link" href="#sec-terms-and-definitions">🔗</a></h2><p>No terms and definitions are listed in this document.</p></section>
+
+    <section id="sec-overall-clause">
+      <h2><span class="heading-label"><span class="heading-number">5</span> </span>Overall<a class="heading-link" href="#sec-overall-clause">🔗</a></h2>
+
+      <section id="sec-overall-general-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">5.1</span> </span>General<a class="heading-link" href="#sec-overall-general-sub-clause">🔗</a></h3>
+        <p>All provisions of SMPTE ST 2067-2 shall apply.</p>
+      </section>
+
+      <section id="sec-overall-format-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">5.2</span> </span>Format<a class="heading-link" href="#sec-overall-format-sub-clause">🔗</a></h3>
+        <p>Track Files shall conform to <a href="#bib-ST379-1">SMPTE ST 379-1:2009</a>.</p>
+      </section>
+
+      <section id="sec-overall-shim-parameters-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">5.3</span> </span>Shim Parameters<a class="heading-link" href="#sec-overall-shim-parameters-sub-clause">🔗</a></h3>
+        <table id="tab-shim-parameter-values-definitions">
+          <caption><span class="heading-label">Table <span class="heading-number">1</span> — </span>Shim Parameter Values Definitions</caption>
+          <thead>
+            <tr>
+              <th style="width: 40%">Shim Parameter</th>
+              <th style="width: 60%">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>shim_id</td>
+              <td>http://www.smpte-ra.org/schemas/2067-21/2016</td>
+            </tr>
+            <tr>
+              <td>picture_bitrate</td>
+              <td>ST 2067-21</td>
+            </tr>
+            <tr>
+              <td>picture_format</td>
+              <td>ST 2067-21</td>
+            </tr>
+            <tr>
+              <td>gc_type</td>
+              <td>379-1-gc</td>
+            </tr>
+            <tr>
+              <td>picture_family</td>
+              <td>JPEG2000</td>
+            </tr>
+            <tr>
+              <td>picture_custom_ANC</td>
+              <td>false</td>
+            </tr>
+            <tr>
+              <td>picture_render_ANC</td>
+              <td>false</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sec-overall-xml-schema-and-namespace-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">5.4</span> </span>XML Schema and Namespace<a class="heading-link" href="#sec-overall-xml-schema-and-namespace-sub-clause">🔗</a></h3>
+
+        <p>XML elements defined by this specification shall conform to the XML schema definitions (see <a href="#bib-XML">World Wide Web Consortium (W3C) (2004, October 28). XML Schema Part 1: Structures (Second Edition)</a>) found in this specification. In the event of a conflict between schema definitions and the prose, the prose shall take precedence.</p>
+        
+        <p>The XML schema root element shall be as defined in <a href="#fig-xml-schema-root-element-definition">Figure 1</a></p>
+
+        <figure id="fig-xml-schema-root-element-definition">
+          <pre data-include="snippets/xml-schema-root-element-definition.xml">&lt;xs:schema targetNamespace="http://www.smpte-ra.org/schemas/2067-21/2016"
+    xmlns:app2e="http://www.smpte-ra.org/schemas/2067-21/2016"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified" 
+    attributeFormDefault="unqualified"&gt;
+    &lt;!-- schema definitions found in this document --&gt;
+&lt;/xs:schema&gt;</pre>
+          <figcaption><span class="heading-label">Figure <span class="heading-number">1</span> — </span>XML Schema root element definition</figcaption>
+        </figure>
+
+        <p><a href="#element-consolidated-schema">Element a</a> is an XML schema document as specified in <a href="#bib-XML">World Wide Web Consortium (W3C) (2004, October 28). XML Schema Part 1: Structures (Second Edition)</a>.  It collects the XML schema definitions defined in this specification. <a href="#element-consolidated-schema">Element a</a> is informative and, in case of conflict, the main prose element takes precedence.</p>
+
+      </section>
+
+    </section>
+
+    <section id="sec-image-essence-clause">
+      <h2><span class="heading-label"><span class="heading-number">6</span> </span>Image Essence<a class="heading-link" href="#sec-image-essence-clause">🔗</a></h2>
+
+      <section id="sec-image-essence-general-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">6.1</span> </span>General<a class="heading-link" href="#sec-image-essence-general-sub-clause">🔗</a></h3>
+        <p>Image essence shall consist of image frames, each a rectangular pixel array.</p>
+      </section>
+
+      <section id="sec-image-essence-constraints-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">6.2</span> </span>Constraints<a class="heading-link" href="#sec-image-essence-constraints-sub-clause">🔗</a></h3>
+
+        <section id="sec-image-essence-constraints-general-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">6.2.1</span> </span>General<a class="heading-link" href="#sec-image-essence-constraints-general-sub-clause">🔗</a></h4>
+          
+          <p>Each image frame shall conform to one of the permitted combinations of image frame characteristics listed in <a href="#tab-image-characteristics">Table 2</a>.</p>
+          
+          <p>The notation a..b indicates that any value between a and b, including a and b, is allowed. For instance, the range 1..4096 includes the value 3840 and the range 1..3112 includes the value 2160.</p>
+
+        <table id="tab-image-characteristics">
+          <caption><span class="heading-label">Table <span class="heading-number">2</span> — </span>Image Characteristics</caption>
+          <thead>
+            <tr>
+              <th>Characteristic</th>
+              <th colspan="10">Constraint</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Image Frame Width</td>
+              <td colspan="3">1...1920</td>
+              <td colspan="1">1...3840</td>
+              <td colspan="3">1...7680</td>
+              <td colspan="3">1...8192</td>
+            </tr>
+            <tr>
+              <td>Image Frame Height</td>
+              <td colspan="3">1...1080</td>
+              <td colspan="1">1...2160</td>
+              <td colspan="3">1...4320</td>
+              <td colspan="3">1...6224</td>
+            </tr>
+            <tr>
+              <td>Colorimetry</td>
+              <td colspan="3"><p>COLOR.1</p> <p>COLOR.2</p> <p>COLOR.3</p></td>
+              <td colspan="1">COLOR.4</td>
+              <td colspan="1">COLOR.3</td>
+              <td colspan="1"><p>COLOR.5</p> <p>COLOR.8</p></td>
+              <td colspan="1">COLOR.7</td>
+              <td colspan="1">COLOR.3</td>
+              <td colspan="1"><p>COLOR.5</p> <p>COLOR.8</p></td>
+              <td colspan="1"><p>COLOR.6</p> <p>COLOR.7</p></td>
+            </tr>
+            <tr>
+              <td>Pixel Bit Depth</td>
+              <td colspan="4"><p>8</p> <p>10</p></td>
+              <td colspan="1"><p>8</p> <p>10</p> <p>12</p> <p>16</p></td>
+              <td colspan="1"><p>10</p> <p>12</p></td>
+              <td colspan="1"><p>10</p> <p>12</p> <p>16</p></td>
+              <td colspan="1"><p>8</p> <p>10</p> <p>12</p> <p>16</p></td>
+              <td colspan="1"><p>10</p> <p>12</p></td>
+              <td colspan="1"><p>10</p> <p>12</p> <p>16</p></td>
+            </tr>
+            <tr>
+              <td>Frame Structure</td>
+              <td colspan="1">Interlaced</td>
+              <td colspan="1">Progressive</td>
+              <td colspan="1">Progressive</td>
+              <td colspan="7">Progressive</td>
+            </tr>
+            <tr>
+              <td>Stereoscopy</td>
+              <td colspan="1">Monoscopic</td>
+              <td colspan="9"><p>Stereoscopic</p> <p>Monoscopic</p></td>
+            </tr>
+            <tr>
+              <td>Frame Rate</td>
+              <td colspan="1"><p>25</p> <p>30</p> <p>30000/1001</p></td>
+              <td colspan="6"><p>24</p> <p>24000/1001</p> <p>25</p> <p>30</p> <p>30000/1001</p> <p>50</p> <p>60</p> <p>60000/1001</p></td>
+              <td colspan="3"><p>24</p> <p>24000/1001</p> <p>25</p> <p>30</p> <p>30000/1001</p> <p>50</p> <p>60</p> <p>60000/1001</p> <p>120</p></td>
+            </tr>
+            <tr>
+              <td>Sampling</td>
+              <td colspan="2">4:2:2</td>
+              <td colspan="1">4:4:4</td>
+              <td colspan="4">4:2:2</td>
+              <td colspan="3">4:4:4</td>
+            </tr>
+            <tr>
+              <td>Quantization</td>
+              <td colspan="7">QE.1</td>
+              <td colspan="3"><p>QE.1</p> <p>QE.2</p></td>
+            </tr>
+            <tr>
+              <td>Color Components</td>
+              <td colspan="2">Y’C’<sub>B</sub>C’<sub>R</sub></td>
+              <td colspan="1">
+                <p>Y’C’<sub>B</sub>C’<sub>R</sub></p>
+                <p>R’G’B’</p></td>
+              <td colspan="4">Y’C’<sub>B</sub>C’<sub>R</sub></td>
+              <td colspan="3">
+                <p>R’G’B’</p></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p id="ex-image-essence-constraints-color6-ycbcr-is-not-supported" class="example"><span class="heading-label">EXAMPLE <span class="heading-number">1</span> —⁠ </span>An image frame that combines COLOR.6 colorimetry with Y’C’<sub>B</sub>C’<sub>R</sub> color components is not supported.</p>
+
+        <p id="ex-image-essence-constraints-supported-example" class="example"><span class="heading-label">EXAMPLE <span class="heading-number">2</span> —⁠ </span>A monoscopic progressive R’G’B’ 4:4:4 image frame with dimensions 3840x2160 that combines COLOR.7 colorimetry with 12-bit pixel bit depth, 60 Hz frame rate, and QE.2 quantization is supported</p>
+
+        <p id="note-image-essence-no-constant-luminance" class="note"><span class="heading-label">NOTE <span class="heading-number">1</span> —⁠ </span>This specification does not support the Y’<sub>C</sub>C’<sub>BC</sub>C’<sub>RC</sub> (constant luminance) color components specified in <a href="#bib-BT2020">Recommendation ITU-R BT.2020-2</a>.</p>
+
+        <p id="note-image-essence-xvycc-uses-ycbcr-and-ycc" class="note"><span class="heading-label">NOTE <span class="heading-number">2</span> —⁠ </span><a href="#bib-xvYCC">IEC 61966-2-4 Edition 1.0</a>&gt; uses Y’C’<sub>B</sub>C’<sub>R</sub> and YCC (luma-chroma-chroma) interchangeably.</p>
+
+        <p id="note-image-essence-unique-formats" class="note"><span class="heading-label">NOTE <span class="heading-number">3</span> —⁠ </span>Image formats defined in this document do not necessarily correspond to image formats defined in other standards or recommendations.</p>
+        </section>
+
+        <section id="sec-image-essence-constraints-frame-dimensions-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">6.2.2</span> </span>Frame Dimensions<a class="heading-link" href="#sec-image-essence-constraints-frame-dimensions-sub-clause">🔗</a></h4>
+          <p>The width and height of the frame are defined as the number of horizontal and vertical pixels, respectively.</p>
+        </section>
+
+        <section id="sec-image-essence-constraints-frame-structure-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">6.2.3</span> </span>Frame Structure<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-sub-clause">🔗</a></h4>
+          
+          <section id="sec-image-essence-constraints-frame-structure-general-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">6.2.3.1</span> </span>General<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-general-sub-clause">🔗</a></h5>
+            <p>Implementations shall support image frames with either a progressive or interlaced structure.</p>
+          </section>
+
+          <section id="sec-image-essence-constraints-frame-structure-progressive-structure-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">6.2.3.2</span> </span>Progressive Structure<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-progressive-structure-sub-clause">🔗</a></h5>
+            <p>An image frame with progressive structure shall consist of a complete image frame, scanned progressively left to right and from top to bottom.</p>
+          </section>
+
+          <section id="sec-image-essence-constraints-frame-structure-interlaced-structure-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">6.2.3.3</span> </span>Interlaced Structure<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-interlaced-structure-sub-clause">🔗</a></h5>
+            <p>An image frame with interlaced structure shall consist of a pair of fields, a first field then a second field. The lines of each field shall have twice the vertical spatial sampling pitch of the frame. Lines in the second field shall be displaced vertically by the vertical sampling pitch and the line timing shall be delayed temporally by half the frame time from the lines in the first field.</p>
+            <p>The temporal order and relative line positions of the two fields are indicated by the Field Dominance and DisplayF2Offset items described in <a href="#sec-image-track-files-generic-picture-essence-descriptor-sub-clause">7.2</a>, <a href="#tab-generic-picture-generic-picture-essence-descriptor-items">Table 7</a>.</p>
+          </section>
+
+          <section id="sec-image-essence-constraints-frame-structure-frame-size-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">6.2.3.4</span> </span>Frame Size<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-frame-size-sub-clause">🔗</a></h5>
+            <p>The height and width of the image frame shall be an integer.</p>
+            <p>Image frames with an interlaced image structure shall have an even number of vertical pixels.</p>
+          </section>
+
+          <section id="sec-image-essence-constraints-frame-structure-frame-rate-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">6.2.3.5</span> </span>Frame Rate<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-frame-rate-sub-clause">🔗</a></h5>
+            <p>When interlaced frame structure is used, the field rate, i.e. the number of image fields per second, shall be twice the frame rate.</p>
+          </section>
+
+          <section id="sec-image-essence-constraints-frame-structure-color-components-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">6.2.3.6</span> </span>Color Components<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-color-components-sub-clause">🔗</a></h5>
+            <p>Implementations shall support image frames sampled using either R’G’B’ or Y’C’<sub>B</sub>C’<sub>R</sub> color component triplets.</p>
+          </section>
+
+          <section id="sec-image-essence-constraints-frame-structure-pixel-bit-depth-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">6.2.3.7</span> </span>Pixel Bit Depth<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-pixel-bit-depth-sub-clause">🔗</a></h5>
+            <p>Implementations shall support the color component of each pixel being represented by an integer in the set {0..2<sup>n</sup> - 1}, with n being the pixel bit depth.</p>
+          </section>
+
+          <section id="sec-image-essence-constraints-frame-structure-sampling-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">6.2.3.8</span> </span>Sampling<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-sampling-sub-clause">🔗</a></h5>
+            <p>In 4:4:4 sampling, each component shall be sampled once at each image frame pixel.</p>
+            <p>In 4:2:2 Y’C’<sub>B</sub>C’<sub>R</sub> sampling, the Y’ component shall be sampled at each pixel, but the C’<sub>B</sub> and C’<sub>R</sub> components shall be horizontally subsampled by a factor of two with respect to the Y component, co-sited with evennumbered Y’ samples</p>
+          </section>
+
+          <section id="sec-image-essence-constraints-frame-structure-stereoscopic-and-monoscopic-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">6.2.3.9</span> </span>Stereoscopic and Monoscopic Image Essence<a class="heading-link" href="#sec-image-essence-constraints-frame-structure-stereoscopic-and-monoscopic-sub-clause">🔗</a></h5>
+            <p>Monoscopic essence consists of a single sequence of image frames.</p>
+            <p>Stereoscopic essence consists of a sequence of pairs of image frames, a left eye frame and a right eye frame, for stereoscopic viewing. The two images of a pair shall be coincident in time.</p>
+          </section>
+        </section>
+      </section>
+
+      <section id="sec-image-essence-constraints-colorimetry-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">6.3</span> </span>Colorimetry<a class="heading-link" href="#sec-image-essence-constraints-colorimetry-sub-clause">🔗</a></h3>
+        <p>Implementations shall support the mappings of component signals to red, green and blue tristimulus values listed in <a href="#tab-colorimetry-systems">Table 3</a>.</p>
+
+        <table id="tab-colorimetry-systems">
+          <caption><span class="heading-label">Table <span class="heading-number">3</span> — </span>Colorimetry Systems</caption>
+          <thead>
+            <tr>
+              <th style="width: 40%">System</th>
+              <th style="width: 60%">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>COLOR.1</td>
+              <td>Mapped as specified for 625-line systems in Section 2.6 of <a href="#bib-BT601">Recommendation ITU-R BT.601-7</a>.</td>
+            </tr>
+            <tr>
+              <td>COLOR.2</td>
+              <td>Mapped as specified for 525-line systems in Section 2.6 of <a href="#bib-BT601">Recommendation ITU-R BT.601-7</a>.</td>
+            </tr>
+            <tr>
+              <td>COLOR.3</td>
+              <td>Mapped as specified in Section 1 of <a href="#bib-BT709">Recommendation ITU-R BT.709-6</a></td>
+            </tr>
+            <tr>
+              <td>COLOR.4</td>
+              <td>Mapped using method xvYCC709 as specified in <a href="#bib-xvYCC">IEC 61966-2-4 Edition 1.0</a>&gt;.</td>
+            </tr>
+            <tr>
+              <td>COLOR.5</td>
+              <td>
+                <p>Mapped as specified in <a href="#bib-BT2020">Recommendation ITU-R BT.2020-2</a>.</p>
+                <p>R’G’B’ components are mapped to Y’C’<sub>B</sub>C’<sub>R</sub> components using the (non-constant luminance) derivation of Y’ and color difference signals specified in Table 4 of <a href="#bib-BT2020">Recommendation ITU-R BT.2020-2</a>.</p></td>
+            </tr>
+            <tr>
+              <td>COLOR.6</td>
+              <td>Mapped using the P3D65 color system color primaries and white point specified in <a href="#bib-ST2113">SMPTE ST 2113:2018</a> and the transfer function specified in <a href="#bib-ST2084">SMPTE ST 2084:2014</a></td>
+            </tr>
+            <tr>
+              <td>COLOR.7</td>
+              <td>
+                <p>R’G’B’ components are mapped using the color primaries and white point specified in Recommendation ITU-R BT.2020 and the transfer function specified in <a href="#bib-ST2084">SMPTE ST 2084:2014</a></p>
+                <p>R’G’B’ components are mapped to Y’C’<sub>B</sub>C’<sub>R</sub> components using the (non-constant luminance) derivation of Y’ and color difference signals specified in Table 4 of <a href="#bib-BT2020">Recommendation ITU-R BT.2020-2</a>.</p></td>
+            </tr>
+            <tr>
+              <td>COLOR.8</td>
+              <td>
+                <p>R’G’B’ components are mapped using the color primaries and white point specified in <a href="#bib-BT2020">Recommendation ITU-R BT.2020-2</a> and the Hybrid Log-Gamma (HLG) reference non-linear transfer function specified in <a href="#bib-BT2100">Recommendation ITU-R BT.2100-2</a>.</p>
+                <p>R’G’B’ components are mapped to Y’C’<sub>B</sub>C’<sub>R</sub> components using the (non-constant luminance) derivation of Y’ and color difference signals specified in Table 4 of <a href="#bib-BT2020">Recommendation ITU-R BT.2020-2</a>.</p></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p id="note-image-essence-prime-means-gamma-corrected" class="note"><span class="heading-label">NOTE <span class="heading-number"></span> —⁠ </span>In <a href="#bib-BT601">Recommendation ITU-R BT.601-7</a> and <a href="#bib-BT709">Recommendation ITU-R BT.709-6</a>, the signals R’, G’, B’, Y’, C’<sub>B</sub> and C’<sub>R</sub> are referred to as signals E’<sub>R</sub>, E’<sub>G</sub>, E’<sub>B</sub>, E’<sub>Y</sub>, E’<sub>CB</sub> and E’<sub>CR</sub> respectively, i.e. they correspond to gamma pre-corrected signals.</p>
+
+      </section>
+
+      <section id="sec-image-essence-constraints-quantization-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">6.4</span> </span>Quantization<a class="heading-link" href="#sec-image-essence-constraints-quantization-sub-clause">🔗</a></h3>
+        <p>Implementations shall support R’G’B’ or Y’C’<sub>B</sub>C’<sub>R</sub> component signals being quantized according to one of the
+          systems specified in <a href="#tab-quantization-systems">Table 4</a>.</p>
+
+        <table id="tab-quantization-systems">
+          <caption><span class="heading-label">Table <span class="heading-number">4</span> — </span>Quantization Systems</caption>
+          <thead>
+            <tr>
+              <th style="width: 15%">System</th>
+              <th style="width: 15%">Component Triplet</th>
+              <th style="width: 40%"><p>Quantization equations</p> <p>(n is the pixel bit depth)</p></th>
+              <th style="width: 40%">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>QE.1</td>
+              <td>
+                <p>R’G’B’</p> 
+                <p>Y’C’<sub>B</sub>C’<sub>R</sub></p>
+              </td>
+              <td>
+                <p>D’<sub>R</sub> = INT( ( 219 · R’ + 16 ) · 2<sup>n-8</sup> )</p>
+                <p>D’<sub>G</sub> = INT( ( 219 · G’ + 16 ) · 2<sup>n-8</sup> )</p>
+                <p>D’<sub>B</sub> = INT( ( 219 · B’ + 16 ) · 2<sup>n-8</sup> )</p>
+                <p>D’<sub>Y</sub> = INT( ( 219 · Y’ + 16 ) · 2<sup>n-8</sup> )</p>
+                <p>D’<sub>CB</sub> = INT( ( 224 · C’<sub>B</sub> + 128 ) · 2<sup>n-8</sup> )</p>
+                <p>D’<sub>CR</sub> = INT( ( 224 · C’<sub>R</sub> + 128 ) · 2<sup>n-8</sup> )</p>
+              </td>
+              <td>Equivalent to quantization equations of Section 3 of <a href="#bib-BT709">Recommendation ITU-R BT.709-6</a>, and Table 3 and Table 4 of <a href="#bib-BT601">Recommendation ITU-R BT.601-7</a>.</td>
+            </tr>
+            <tr>
+              <td>QE.2</td>
+              <td>
+                <p>R’G’B’</p> 
+              </td>
+              <td>
+                <p>D’<sub>R</sub> = INT( R’ · (2<sup>n-8</sup> - 1) )</p>
+                <p>D’<sub>G</sub> = INT( G’ · (2<sup>n-8</sup> - 1) )</p>
+                <p>D’<sub>B</sub> = INT( B’ · (2<sup>n-8</sup> - 1) )</p>
+              </td>
+              <td>The mapping of components signals using the QE.2 system onto interfaces such as HD-SDI is defined in other specifications.</td>
+            </tr>
+            </tbody>
+        </table>
+      </section>
+
+      <section id="sec-image-essence-encoding-profile">
+        <h3><span class="heading-label"><span class="heading-number">6.5</span> </span>Encoding Profile<a class="heading-link" href="#sec-image-essence-encoding-profile">🔗</a></h3>
+        <section id="sec-image-essence-encoding-profile-single-codestream">
+          <h4><span class="heading-label"><span class="heading-number">6.5.1</span> </span>Single Codestream<a class="heading-link" href="#sec-image-essence-encoding-profile-single-codestream">🔗</a></h4>
+          <p>Each frame, in the case of progressive structure, or field, in the case of interlaced structure, shall be encoded as a single codestream.</p>
+        </section>
+        
+        <section id="sec-image-essence-encoding-profile-jpeg2000-encoding-constraints">
+          <h4><span class="heading-label"><span class="heading-number">6.5.2</span> </span>JPEG 2000 Encoding Constraints<a class="heading-link" href="#sec-image-essence-encoding-profile-jpeg2000-encoding-constraints">🔗</a></h4>
+          <p>Implementations shall support the combinations of JPEG 2000 profiles (as specified in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a>), constraints on HTJ2K Codestreams, and image frame dimensions listed in <a href="#tab-jpeg2000-encoding-constraints">Table 5</a>.</p>
+          <p id="note-image-ab-notation" class="note"><span class="heading-label">NOTE <span class="heading-number">1</span> —⁠ </span>
+            See <a href="#sec-image-essence-constraints-sub-clause">6.2</a> for a definition of the notation <i>a…b</i>.
+          </p>
+
+          <table id="tab-jpeg2000-encoding-constraints">
+            <caption><span class="heading-label">Table <span class="heading-number">5</span> — </span>JPEG 2000 Encoding Constraints</caption>
+            <tbody>
+              <tr>
+                <td colspan="1">Image Frame Width</td>
+                <td colspan="3">1...3840</td>
+                <td colspan="3">1...2048</td>
+                <td colspan="3">2049...4096</td>
+                <td colspan="3">4097...8192</td>
+              </tr>
+              <tr>
+                <td colspan="1">Image Frame Height</td>
+                <td colspan="3">1...2160</td>
+                <td colspan="3">1...1556</td>
+                <td colspan="3">1...3112</td>
+                <td colspan="3">1...6224</td>
+              </tr>
+              <tr>
+                <td colspan="1">JPEG 2000 Profile</td>
+                <td colspan="1">Broadcast Contribution Single Tile Profile</td>
+                <td colspan="1">Broadcast Contribution Multi-tile Reversible Profile</td>
+                <td colspan="1" rowspan="3">APP2.HT.REV or APP2.HT.IRV</td>
+                <td colspan="1">2k IMF Single/Multi Tile Reversible Profile</td>
+                <td colspan="1">2k IMF Single Tile Lossy Profile</td>
+                <td colspan="1" rowspan="3">APP2.HT.REV or APP2.HT.IRV</td>
+                <td colspan="1">4k IMF Single/Multi Tile Reversible Profile</td>
+                <td colspan="1">4k IMF Single Tile Lossy Profile</td>
+                <td colspan="1" rowspan="3">APP2.HT.REV or APP2.HT.IRV</td>
+                <td colspan="1">8k IMF Single/Multi Tile Reversible Profile</td>
+                <td colspan="1">8k IMF Single Tile Lossy Profile</td>
+                <td colspan="1" rowspan="3">APP2.HT.REV or APP2.HT.IRV</td>
+              </tr>
+              <tr>
+                <td colspan="1">JPEG 2000 Operating Levels</td>
+                <td colspan="1"><p>Level 1</p> <p>Level 2</p> <p>Level 3</p> <p>Level 4</p> <p>Level 5</p></td>
+                <td colspan="1"><p>Level 6</p> <p>Level 7</p></td>
+                <td colspan="2"><p>Mainlevel 1</p> <p>Mainlevel 2</p> <p>Mainlevel 3</p> <p>Mainlevel 4</p> <p>Mainlevel 5</p> <p>Mainlevel 6</p></td>
+                <td colspan="2"><p>Mainlevel 1</p> <p>Mainlevel 2</p> <p>Mainlevel 3</p> <p>Mainlevel 4</p> <p>Mainlevel 5</p> <p>Mainlevel 6</p> <p>Mainlevel 7</p> <p>Mainlevel 8</p></td>
+                <td colspan="2"><p>Mainlevel 1</p> <p>Mainlevel 2</p> <p>Mainlevel 3</p> <p>Mainlevel 4</p> <p>Mainlevel 5</p> <p>Mainlevel 6</p> <p>Mainlevel 7</p> <p>Mainlevel 8</p><p>Mainlevel 9</p><p>Mainlevel 10</p></td>
+              </tr>
+              <tr>
+                <td colspan="1">JPEG 2000 Operating Sublevels</td>
+                <td colspan="2">n/a</td>
+                <td colspan="1">Sublevel 0 only</td>
+                <td colspan="1">All allowed at a given Mainlevel with the exception of Sublevel 0</td>
+                <td colspan="1">Sublevel 0 only</td>
+                <td colspan="1">All allowed at a given Mainlevel with the exception of Sublevel 0</td>
+                <td colspan="1">Sublevel 0 only</td>
+                <td colspan="1">All allowed at a given Mainlevel with the exception of Sublevel 0</td>
+              </tr>
+            </tbody>  
+          </table>
+
+          <p id="note-image-essence-j2k-broadcast-profile-limitations" class="note"><span class="heading-label">NOTE <span class="heading-number">2</span> —⁠ </span>The JPEG 2000 Broadcast Contribution profiles do not support either 16-bit Pixel Bit Depth or a Maximum Components Sampling Rate greater than 520·10<sup>6</sup> samples · s<sup>-1</sup>. In both cases, JPEG 2000 IMF profiles are used instead.</p>
+
+          <p id="note-image-essence-j2k-profiles-levels-sublevels-described-elsewhere" class="note"><span class="heading-label">NOTE <span class="heading-number">3</span> —⁠ </span>The JPEG 2000 profiles, operating level and sublevel in <a href="#tab-jpeg2000-encoding-constraints">Table 5</a> are selected as described in <a href="#sec-recommended-selection-of-jpeg2000-profiles">Annex E</a></p>
+
+          <p id="note-image-essence-htj2k-constraints-specified-elsewhere" class="note"><span class="heading-label">NOTE <span class="heading-number">4</span> —⁠ </span>The APP2.HT.REV or APP2.HT.IRV constraints are specified in <a href="#sec-isoiec-15444-15-htj2k-codestream-constraints">Annex H</a>.</p>
+
+          <p>Example encoder commands that generate JPEG 2000 Part-1 and JPEG 2000 Part-15 (HTJ2K) codestreams that satisfy these constraints are included in <a href="#sec-example-encoder-commands">Annex I</a>.</p>
+
+        </section>
+
+        <section id="sec-image-essence-encoding-profile-component-ordering">
+          <h4><span class="heading-label"><span class="heading-number">6.5.3</span> </span>Component Ordering<a class="heading-link" href="#sec-image-essence-encoding-profile-component-ordering">🔗</a></h4>
+          <p>In a codestream, color components shall be ordered as specified in <a href="#tab-jpeg2000-component-ordering">Table 6</a>.</p>
+
+          <table id="tab-jpeg2000-component-ordering">
+            <caption><span class="heading-label">Table <span class="heading-number">6</span> — </span>JPEG 2000 Component Ordering</caption>
+            <thead>
+              <tr>
+                <th>Component Index</th>
+                <th>R’G’B’</th>
+                <th>Y’C’<sub>B</sub>C’<sub>R</sub></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td> <td>R’</td> <td>Y’</td>
+              </tr>
+              <tr>
+                <td>1</td> <td>G’</td> <td>C’<sub>B</sub></td>
+              </tr>
+              <tr>
+                <td>2</td> <td>B’</td> <td>C’<sub>R</sub></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </section>
+
+    <section id="sec-image-track-files-clause">
+      <h2><span class="heading-label"><span class="heading-number">7</span> </span>Image Track Files<a class="heading-link" href="#sec-image-track-files-clause">🔗</a></h2>
+
+      <section id="sec-image-track-files-essence-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">7.1</span> </span>Essence<a class="heading-link" href="#sec-image-track-files-essence-sub-clause">🔗</a></h3>
+
+        <section id="sec-image-track-files-essence-general-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">7.1.1</span> </span>General<a class="heading-link" href="#sec-image-track-files-essence-general-sub-clause">🔗</a></h4>
+          <p>Image Track Files shall contain image essence conforming to <a href="#sec-image-essence-clause">Clause 6</a></p>
+        </section>
+
+        <section id="sec-image-track-files-essence-wrapping-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">7.1.2</span> </span>Wrapping<a class="heading-link" href="#sec-image-track-files-essence-wrapping-sub-clause">🔗</a></h4>
+          <p>Image Track Files shall conform to <a href="#bib-ST422">SMPTE ST 422:2019</a></p>
+          <p>In the case of progressive frame structure, the image essence shall be wrapped according to mode P1 specified in <a href="#bib-ST422">SMPTE ST 422:2019</a> ("Frame-wrapping").</p>
+          <p>In the case of interlaced frame structure, the image essence shall be wrapped according to mode I1 specified in <a href="#bib-ST422">SMPTE ST 422:2019</a> ("Interlaced Frame, 1 field per KLV Element")</p>
+          <p>The Top-Level File Package of Image Track File shall reference:</p>
+          <ul>
+            <li>a CDCI Picture Essence Descriptor if the image uses Y’C’<sub>B</sub>C’<sub>R</sub> color components; or</li>
+            <li>an RGBA Picture Essence Descriptor if the image essence uses R’G’B’ color  components.</li>
+          </ul>
+        </section>
+      </section>
+
+      <section id="sec-image-track-files-generic-picture-essence-descriptor-sub-clause">
+        <h3><span class="heading-label"><span class="heading-number">7.2</span> </span>Generic Picture Essence Descriptor<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-sub-clause">🔗</a></h3>
+
+        <section id="sec-image-track-files-generic-picture-essence-descriptor-general-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">7.2.1</span> </span>General<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-general-sub-clause">🔗</a></h4>
+
+          <section id="sec-image-track-files-generic-picture-essence-descriptor-general-general-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">7.2.1.1</span> </span>General<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-general-general-sub-clause">🔗</a></h5>
+            <p>The Generic Picture Essence Descriptor items (including those specified in <a href="#bib-ST2067-2">SMPTE ST 2067-2:2020</a>) shall be constrained as specified in <a href="#tab-generic-picture-generic-picture-essence-descriptor-items">Table 7</a>.</p>
+
+            <table id="tab-generic-picture-generic-picture-essence-descriptor-items">
+              <caption><span class="heading-label">Table <span class="heading-number">7</span> — </span>Generic Picture Essence Descriptor Items</caption>
+              <thead>
+                <tr>
+                  <th>Generic Picture Essence Descriptor Item</th>
+                  <th>Constraints</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sample Rate</td> 
+                  <td>See Annex A of <a href="#bib-ST422">SMPTE ST 422:2019</a></td>
+                </tr>
+                <tr>
+                  <td>Signal Standard</td> 
+                  <td>Shall be ignored</td>
+                </tr>
+                <tr>
+                  <td>Frame Layout</td> 
+                  <td>See <a href="#sec-image-track-files-generic-picture-essence-descriptor-general-frame-layout-sub-clause">7.2.1.4</a></td>
+                </tr>
+                <tr>
+                  <td>Stored Width</td> 
+                  <td>See <a href="#sec-image-track-files-generic-picture-essence-descriptor-general-stored-width-and-stored-height-sub-clause">7.2.1.2</a></td>
+                </tr>
+                <tr>
+                  <td>Stored Height</td> 
+                  <td>See <a href="#sec-image-track-files-generic-picture-essence-descriptor-general-stored-width-and-stored-height-sub-clause">7.2.1.2</a></td>
+                </tr>
+                <tr>
+                  <td>StoredF2Offset</td> 
+                  <td>Shall not be present</td>
+                </tr>
+                <tr>
+                  <td>Sampled Width</td> 
+                  <td>Shall not be present or shall be equal to Stored Width</td>
+                </tr>
+                <tr>
+                  <td>Sampled Height</td> 
+                  <td>Shall not be present or shall be equal to Stored Height</td>
+                </tr>
+                <tr>
+                  <td>SampledXOffset</td> 
+                  <td>Shall not be present or shall be 0.</td>
+                </tr>
+                <tr>
+                  <td>SampledYOffset</td> 
+                  <td>Shall not be present or shall be 0.</td>
+                </tr>
+                <tr>
+                  <td>DisplayHeight</td> 
+                  <td rowspan="8">
+                    <p>See <a href="#sec-image-frame-and-active-area-rectangle-examples">Annex G</a> for illustrative examples.</p>
+                    <p id="note-image-track-files-active-area-default" class="note"><span class="heading-label">NOTE <span class="heading-number"></span> —⁠ </span>Unless explicitly set, the Active Area Rectangle is by default equal to the Display Rectangle — see <a href="#bib-ST2067-2">SMPTE ST 2067-2:2020</a>.</p>
+                  </td>
+                </tr>
+                <tr> <td>DisplayWidth</td> </tr>
+                <tr> <td>DisplayXOffset</td> </tr>
+                <tr> <td>DisplayYOffset</td> </tr>
+                <tr> <td>ActiveHeight</td> </tr>
+                <tr> <td>ActiveWidth</td> </tr>
+                <tr> <td>ActiveXOffset</td> </tr>
+                <tr> <td>ActiveYOffset</td> </tr>
+                <tr>
+                  <td>DisplayF2Offset</td> 
+                  <td>Shall be present if interlaced structure is used and should not be present if progressive structure is used.</td>
+                </tr>
+                <tr>
+                  <td>AspectRatio</td> 
+                  <td>See <a href="#sec-image-track-files-generic-picture-essence-descriptor-general-aspect-ratio-sub-clause">7.2.1.3</a></td>
+                </tr>
+                <tr>
+                  <td>Active Format Descriptor</td> 
+                  <td>Shall be ignored</td>
+                </tr>
+                <tr>
+                  <td>Video Line Map</td> 
+                  <td>Shall be ignored</td>
+                </tr>
+                <tr>
+                  <td>Alpha Transparency</td> 
+                  <td>Shall be ignored</td>
+                </tr>
+                <tr>
+                  <td>Transfer Characteristic</td> 
+                  <td>Shall be present. See <a href="#sec-image-track-files-generic-picture-essence-descriptor-transfer-characteristic-sub-clause">7.2.2</a></td>
+                </tr>
+                <tr>
+                  <td>Image Alignment Offset</td> 
+                  <td>Shall not be present</td>
+                </tr>
+                <tr>
+                  <td>Image Start Offset</td> 
+                  <td>Shall not be present</td>
+                </tr>
+                <tr>
+                  <td>Image End Offset</td> 
+                  <td>Shall not be present</td>
+                </tr>
+                <tr>
+                  <td>FieldDominance</td> 
+                  <td>Shall be present if interlaced structure is used and shall not be present if progressive structure is used</td>
+                </tr>
+                <tr>
+                  <td>Picture Essence Coding</td> 
+                  <td>Shall be present. See <a href="#sec-image-track-files-generic-picture-essence-descriptor-picture-essence-coding-sub-clause">7.2.5</a></td>
+                </tr>
+                <tr>
+                  <td>Coding Equations</td> 
+                  <td>
+                    <p>Shall be present if Y’C’<sub>B</sub>C’<sub>R</sub> sampling is used. See <a href="#sec-image-track-files-generic-picture-essence-descriptor-coding-equations-sub-clause">7.2.3</a></p>
+                    <p>Shall be ignored if R’G’B’ sampling is used</p></td>
+                </tr>
+                <tr>
+                  <td>Color Primaries</td> 
+                  <td>Shall be present. See <a href="#sec-image-track-files-generic-picture-essence-descriptor-color-primaries-sub-clause">7.2.4</a></td>
+                </tr>
+                <tr>
+                  <td>Alternative Center Cuts</td> 
+                  <td>See <a href="#sec-image-track-files-generic-picture-essence-descriptor-alternative-center-cuts-coding-sub-clause">7.2.6</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="sec-image-track-files-generic-picture-essence-descriptor-general-stored-width-and-stored-height-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">7.2.1.2</span> </span>Stored Width and Stored Height<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-general-stored-width-and-stored-height-sub-clause">🔗</a></h5>
+            <p>The values of the Stored Width and Stored Height items shall be set according to the image frame structure, as specified in <a href="#tab-stored-width-and-stored-height">Table 8</a>.</p>
+
+            <table id="tab-stored-width-and-stored-height">
+              <caption><span class="heading-label">Table <span class="heading-number">8</span> — </span>Stored Width and Stored Height</caption>
+              <thead>
+                <tr>
+                  <th>Frame Structure</th>
+                  <th>Progressive</th>
+                  <th>Interlaced</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Stored Width</td> <td>Image Frame Width</td> <td>Image Frame Width</td>
+                </tr>
+                <tr>
+                  <td>Stored Height</td> <td>Image Frame Height</td> <td>Image Frame Height / 2</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="sec-image-track-files-generic-picture-essence-descriptor-general-aspect-ratio-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">7.2.1.3</span> </span>Aspect Ratio<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-general-aspect-ratio-sub-clause">🔗</a></h5>
+            <p>The value of the Aspect Ratio item shall be the ratio of width to height of the rectangular area into which the pixels within the Display Rectangle are intended to be displayed.</p>
+
+            <p id="note-image-track-files-interlaced-aspect-ratio" class="note"><span class="heading-label">NOTE <span class="heading-number"></span> —⁠ </span>For interlaced image structure, the <i>rectangular area into which the pixels within the Display Rectangle are intended to be displayed</i> is the rectangular area resulting from the interlacing of the pixel elements within the Display Rectangle of each of the two fields of the image frame.</p>
+
+            <p id="ex-image-track-files-active-area-examples-are-presented-elsewhere" class="example"><span class="heading-label">EXAMPLE <span class="heading-number"></span> —⁠ </span>Illustrative examples are presented in <a href="#sec-image-frame-and-active-area-rectangle-examples">Annex G</a>.</p>
+          </section>
+
+          <section id="sec-image-track-files-generic-picture-essence-descriptor-general-frame-layout-sub-clause">
+            <h5><span class="heading-label"><span class="heading-number">7.2.1.4</span> </span>Frame Layout<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-general-frame-layout-sub-clause">🔗</a></h5>
+            <p>The value of the Frame Layout item shall be equal to:</p>
+            <ul>
+              <li>00h (FULL_FRAME) if the image structure is progressive.</li>
+              <li>01h (SEPARATE_FIELDS) if the image structure is interlaced.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="sec-image-track-files-generic-picture-essence-descriptor-transfer-characteristic-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">7.2.2</span> </span>Transfer Characteristic<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-transfer-characteristic-sub-clause">🔗</a></h4>
+          <p>The value of the Transfer Characteristic item shall be equal to:</p>
+          <ul>
+            <li><code>06.0E.2B.34.04.01.01.01.04.01.01.01.01.02.00.00</code> if COLOR.1, COLOR.2 or COLOR.3 systems are used.</li>
+            <li><code>06.0E.2B.34.04.01.01.0D.04.01.01.01.01.08.00.00</code> if COLOR.4 system is used</li>
+            <li><code>06.0E.2B.34.04.01.01.0E.04.01.01.01.01.09.00.00</code> (see <a href="#sec-itur-bt2020-transfer-characteristic-label">Annex A</a>) if COLOR.5 system is used.</li>
+            <li><code>06.0E.2B.34.04.01.01.0D.04.01.01.01.01.0A.00.00</code> (see <a href="#sec-smpte-st2084-transfer-characteristic-label">Annex C</a>) if COLOR.6 or COLOR.7 systems
+              are used.</li>
+            <li><code>06.0E.2B.34.04.01.01.0D.04.01.01.01.01.0B.00.00</code> if COLOR.8 system is used.</li>
+          </ul>
+        </section>
+
+        <section id="sec-image-track-files-generic-picture-essence-descriptor-coding-equations-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">7.2.3</span> </span>Coding Equations<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-coding-equations-sub-clause">🔗</a></h4>
+          <p>The value of the Coding Equations item shall be equal to:</p>
+          <ul>
+            <li><code>06.0E.2B.34.04.01.01.01.04.01.01.01.02.01.00.00</code> if COLOR.1 or COLOR.2 systems are used.</li>
+            <li><code>06.0E.2B.34.04.01.01.01.04.01.01.01.02.02.00.00</code> if COLOR.3 or COLOR.4 systems are used.</li>
+            <li><code>06.0E.2B.34.04.01.01.0D.04.01.01.01.02.06.00.00</code> (see <a href="#sec-itur-bt2020-non-constant-luminance-coding-equations-label">Annex D</a>) if COLOR.5, COLOR.7 or COLOR.8 systems are used.</li>
+          </ul>
+        </section>
+
+        <section id="sec-image-track-files-generic-picture-essence-descriptor-color-primaries-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">7.2.4</span> </span>Color Primaries<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-color-primaries-sub-clause">🔗</a></h4>
+          <p>The value of the Color Primaries item shall be equal to:</p>
+          <ul>
+            <li><code>06.0E.2B.34.04.01.01.06.04.01.01.01.03.02.00.00</code> if the COLOR.1 system is used.</li>
+            <li><code>06.0E.2B.34.04.01.01.06.04.01.01.01.03.01.00.00</code> if the COLOR.2 system is used.</li>
+            <li><code>06.0E.2B.34.04.01.01.06.04.01.01.01.03.03.00.00</code> if the COLOR.3 or COLOR.4 systems are used.</li>
+            <li><code>06.0E.2B.34.04.01.01.0D.04.01.01.01.03.04.00.00</code> if the COLOR.5, COLOR.7 or COLOR.8 systems  are used.</li>
+            <li><code>06.0E.2B.34.04.01.01.0D.04.01.01.01.03.06.00.00</code> if the COLOR.6 system is used.</li>
+          </ul>
+        </section>
+
+        <section id="sec-image-track-files-generic-picture-essence-descriptor-picture-essence-coding-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">7.2.5</span> </span>Picture Essence Coding<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-picture-essence-coding-sub-clause">🔗</a></h4>
+          <p>The value of the Picture Essence Coding item shall reflect the JPEG 2000 profile and operating level used to encode the image essence if ISO/IEC 15444-1 image encoding is used, or the UL <code>06.0E.2B.34.04.01.01.0D.04.01.02.02.03.01.08.01</code> if ISO/IEC 15444-15 image encoding is used.</p>
+          <p id="note-image-track-files-j2k-constraints-described-elsewhere" class="note"><span class="heading-label">NOTE <span class="heading-number"></span> —⁠ </span>See <a href="#sec-image-essence-encoding-profile-jpeg2000-encoding-constraints">6.5.2</a> for list of JPEG 2000 Encoding Constraints.</p>
+        </section>
+
+        <section id="sec-image-track-files-generic-picture-essence-descriptor-alternative-center-cuts-coding-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">7.2.6</span> </span>Alternative Center Cuts<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-alternative-center-cuts-coding-sub-clause">🔗</a></h4>
+          <p>The Alternative Center Cuts item is specified in <a href="#bib-ST2067-2">SMPTE ST 2067-2:2020</a>.</p>
+          <p>An empty Alternative Center Cuts item shall be ignored. Any Alternative Center Cut value not specified in <a href="#bib-ST2067-2">SMPTE ST 2067-2:2020</a> may be safely ignored.</p>
+        </section>
+
+        <section id="sec-image-track-files-generic-picture-essence-descriptor-mastering-display-color-volume-metadata-coding-sub-clause">
+          <h4><span class="heading-label"><span class="heading-number">7.2.7</span> </span>Mastering Display Color Volume Metadata<a class="heading-link" href="#sec-image-track-files-generic-picture-essence-descriptor-mastering-display-color-volume-metadata-coding-sub-clause">🔗</a></h4>
+          <p>If COLOR.3, COLOR.5, COLOR.6, COLOR.7 or COLOR.8 system is used then:</p>
+          <ul>
+            <li>either all or none of the items specified in <a href="#sec-mastering-display-color-volume-metadata">Annex B</a> shall be present;</li>
+            <li>the items specified in <a href="#sec-mastering-display-color-volume-metadata">Annex B</a> should characterize the mastering display; and</li>
+            <li>if the items specified in <a href="#sec-mastering-display-color-volume-metadata">Annex B</a> are absent, no ST 2086 metadata values are assumed.</li>
+          </ul>
+          <p>If neither COLOR.3, COLOR.5, COLOR.6, COLOR.7 nor COLOR.8 system is used, then no item specified in <a href="#sec-mastering-display-color-volume-metadata">Annex B</a> shall be present.</p>
+          <p id="note-image-track-files-mastering-display-metadata-examples-described-elsewhere" class="note"><span class="heading-label">NOTE <span class="heading-number">1</span> —⁠ </span><a href="#sec-mastering-display-color-volume-metadata-mastering-display-examples">Clause B.6</a> contains selected examples values for Mastering Display Color Volume Metadata. Other values, not specified in these examples, are also permitted.</p>
+          <p id="note-image-track-files-mastering-display-metadata-for-hlg" class="note"><span class="heading-label">NOTE <span class="heading-number">2</span> —⁠ </span>Although COLOR.8 does not use Master Display Color Volume Metadata, the option to include it is intended to facilitate downstream conversion to formats that do require this data. General information on conversion between high dynamic range systems defined by <a href="#bib-BT2100">Recommendation ITU-R BT.2100-2</a> can be found in <a href="#bib-BT2390-8">Report ITU-R BT.2390-8</a>.</p>
+        </section>
+
+      </section>
+
+      <section id="sec-image-track-files-rgba-picture-essence-descriptor">
+        <h3><span class="heading-label"><span class="heading-number">7.3</span> </span>RGBA Picture Essence Descriptor<a class="heading-link" href="#sec-image-track-files-rgba-picture-essence-descriptor">🔗</a></h3>
+
+        <section id="sec-image-track-files-rgba-picture-essence-descriptor-general">
+          <h4><span class="heading-label"><span class="heading-number">7.3.1</span> </span>General<a class="heading-link" href="#sec-image-track-files-rgba-picture-essence-descriptor-general">🔗</a></h4>
+          <p>The RGBA Picture Essence Descriptor items shall be constrained as specified in <a href="#tab-rgba-essence-descriptor-items">Table 9</a>.</p>
+          <table id="tab-rgba-essence-descriptor-items">
+            <caption><span class="heading-label">Table <span class="heading-number">9</span> — </span>RGBA Essence Descriptor Items</caption>
+            <thead>
+              <tr>
+                <th>RGBA Picture Essence Descriptor Item</th>
+                <th>Constraints</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Component Max Ref</td>
+                <td>Shall be present. See <a href="#sec-image-track-files-rgba-picture-essence-descriptor-component-max-ref-and-component-min-ref">7.3.2</a>.</td>
+              </tr>
+              <tr>
+                <td>Component Min Ref</td>
+                <td>Shall be present. See <a href="#sec-image-track-files-rgba-picture-essence-descriptor-component-max-ref-and-component-min-ref">7.3.2</a>.</td>
+              </tr>
+              <tr>
+                <td>Alpha Max Ref</td>
+                <td>Shall not be present.</td>
+              </tr>
+              <tr>
+                <td>Alpha Min Ref</td>
+                <td>Shall not be present.</td>
+              </tr>
+              <tr>
+                <td>ScanningDirection</td>
+                <td>Shall be present and shall be  equal to 00h.</td>
+              </tr>
+              <tr>
+                <td>PixelLayout</td>
+                <td>Shall be ignored.</td>
+              </tr>
+              <tr>
+                <td>Palette</td>
+                <td>Shall not be present.</td>
+              </tr>
+              <tr>
+                <td>PaletteLayout</td>
+                <td>Shall not be present.</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+        <section id="sec-image-track-files-rgba-picture-essence-descriptor-component-max-ref-and-component-min-ref">
+          <h4><span class="heading-label"><span class="heading-number">7.3.2</span> </span>Component Max Ref and Component Min Ref<a class="heading-link" href="#sec-image-track-files-rgba-picture-essence-descriptor-component-max-ref-and-component-min-ref">🔗</a></h4>
+          <p>The values of the Component Max Ref and Component Min Ref items shall be set according to the pixel bit depth and quantization system used, as specified in <a href="#tab-component-max-ref-and-component-min-ref-values">Table 10</a>.</p>
+
+          <table id="tab-component-max-ref-and-component-min-ref-values">
+            <caption><span class="heading-label">Table <span class="heading-number">10</span> — </span>Component Max Ref and Component Min Ref values</caption>
+            <thead>
+              <tr>
+                <th>System</th>
+                <th colspan="4">QE.1</th>
+                <th colspan="4">QE.2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pixel Bit Depth</td>
+                <td>8</td> <td>10</td> <td>12</td> <td>16</td>
+                <td>8</td> <td>10</td> <td>12</td> <td>16</td>
+              </tr>
+              <tr>
+                <td>Component Min Ref</td>
+                <td>16</td> <td>64</td> <td>256</td> <td>4096</td>
+                <td>0</td> <td>0</td> <td>0</td> <td>0</td>
+              </tr>
+              <tr>
+                <td>Component Max Ref</td>
+                <td>235</td> <td>940</td> <td>3760</td> <td>60160</td>
+                <td>255</td> <td>1023</td> <td>4095</td> <td>65535</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </section>
+
+      <section id="sec-image-track-files-cdci-picture-essence-descriptor">
+        <h3><span class="heading-label"><span class="heading-number">7.4</span> </span>CDCI Picture Essence Descriptor<a class="heading-link" href="#sec-image-track-files-cdci-picture-essence-descriptor">🔗</a></h3>
+
+        <section id="sec-image-track-files-cdci-picture-essence-descriptor-general">
+          <h4><span class="heading-label"><span class="heading-number">7.4.1</span> </span>General<a class="heading-link" href="#sec-image-track-files-cdci-picture-essence-descriptor-general">🔗</a></h4>
+          <p>The CDCI Picture Essence Descriptor items shall be constrained as specified in <a href="#tab-cdci-essence-descriptor-items">Table 11</a>.</p>
+
+          <table id="tab-cdci-essence-descriptor-items">
+            <caption><span class="heading-label">Table <span class="heading-number">11</span> — </span>CDCI Picture Essence Descriptor</caption>
+            <thead>
+              <tr>
+                <th>CDCI Picture Essence Descriptor Item</th>
+                <th>Constraints</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Component Depth</td>
+                <td>Shall be present and shall be equal to the Pixel Bit Depth used (see <a href="#sec-image-essence-constraints-frame-structure-pixel-bit-depth-sub-clause">6.2.3.7</a>).</td>
+              </tr>
+              <tr>
+                <td>Horizontal Subsampling</td>
+                <td>See <a href="#sec-image-track-files-cdci-picture-essence-descriptor-horizontal-subsampling">7.4.2</a>.</td>
+              </tr>
+              <tr>
+                <td>Vertical Subsampling</td>
+                <td>Shall be 01h.</td>
+              </tr>
+              <tr>
+                <td>Color Siting</td>
+                <td>Shall be present and shall be 00h.</td>
+              </tr>
+              <tr>
+                <td>ReversedByteOrder</td>
+                <td>Shall not be present.</td>
+              </tr>
+              <tr>
+                <td>PaddingBits</td>
+                <td>Shall not be present.</td>
+              </tr>
+              <tr>
+                <td>Alpha Sample Depth</td>
+                <td>Shall not be present.</td>
+              </tr>
+              <tr>
+                <td>Black Ref Level</td>
+                <td>Shall be present. See <a href="#sec-image-track-files-cdci-picture-essence-descriptor-black-ref-level-white-ref-level-and-color-range-values">7.4.3</a>.</td>
+              </tr>
+              <tr>
+                <td>White Ref Level</td>
+                <td>Shall be present. See <a href="#sec-image-track-files-cdci-picture-essence-descriptor-black-ref-level-white-ref-level-and-color-range-values">7.4.3</a>.</td>
+              </tr>
+              <tr>
+                <td>Color Range</td>
+                <td>Shall be present. See <a href="#sec-image-track-files-cdci-picture-essence-descriptor-black-ref-level-white-ref-level-and-color-range-values">7.4.3</a>.</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </section>
+
+        <section id="sec-image-track-files-cdci-picture-essence-descriptor-horizontal-subsampling">
+          <h4><span class="heading-label"><span class="heading-number">7.4.2</span> </span>Horizontal Subsampling<a class="heading-link" href="#sec-image-track-files-cdci-picture-essence-descriptor-horizontal-subsampling">🔗</a></h4>
+          <p>The value of Horizontal Subsampling item shall be equal to:</p>
+          <ul>
+            <li>01h if 4:4:4 sampling is used per <a href="#sec-image-essence-constraints-frame-structure-sampling-sub-clause">6.2.3.8</a>.</li>
+            <li>02h if 4:2:2 Y’C’<sub>B</sub>C’<sub>R</sub> sampling is used per <a href="#sec-image-essence-constraints-frame-structure-sampling-sub-clause">6.2.3.8</a>.</li>
+          </ul>
+        </section>
+
+        <section id="sec-image-track-files-cdci-picture-essence-descriptor-black-ref-level-white-ref-level-and-color-range-values">
+          <h4><span class="heading-label"><span class="heading-number">7.4.3</span> </span>Black Ref Level, White Ref Level and Color Range Values<a class="heading-link" href="#sec-image-track-files-cdci-picture-essence-descriptor-black-ref-level-white-ref-level-and-color-range-values">🔗</a></h4>
+          <p>If COLOR.1, COLOR.2, COLOR.3, COLOR.4, COLOR.5, COLOR.7 or COLOR.8 is used, the values of the  Black Ref Level, White Ref level and Color Range items shall be set according to <a href="#tab-black-ref-level-white-ref-level-and-color-range-values-for-color-1-5-7-8">Table 12</a>.</p>
+          <table id="tab-black-ref-level-white-ref-level-and-color-range-values-for-color-1-5-7-8">
+            <caption><span class="heading-label">Table <span class="heading-number">12</span> — </span>Black Ref Level, White Ref level and Color Range values for COLOR.1, COLOR.2, COLOR.3, COLOR.4, COLOR.5, COLOR.7 and COLOR.8</caption>
+            <thead>
+              <tr>
+                <th colspan="1" rowspan="2">Colorimetry</th>
+                <th colspan="2"><p>COLOR.1</p><p>COLOR.2</p></th>
+                <th colspan="2"></th>
+                <th colspan="2" rowspan="2">COLOR.4</th>
+                <th colspan="3"><p>COLOR.5</p><p>COLOR.7</p></th>
+              </tr>
+              <tr>
+                <th colspan="4">COLOR.3</th>
+                <th colspan="2">COLOR.8</th>
+                <th colspan="1"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pixel Bit Depth</td>
+                <td>8</td> <td>10</td> <td>12</td> <td>16</td>
+                <td>8</td> <td>10</td>
+                <td>10</td> <td>12</td> <td>16</td>
+              </tr>
+              <tr>
+                <td>Black Ref Level</td>
+                <td>16</td> <td>64</td> <td>256</td> <td>4096</td>
+                <td>16</td> <td>64</td>
+                <td>64</td> <td>256</td> <td>4096</td>
+              </tr>
+              <tr>
+                <td>White Ref Level</td>
+                <td>235</td> <td>940</td> <td>3760</td> <td>60160</td>
+                <td>235</td> <td>940</td>
+                <td>940</td> <td>3760</td> <td>60160</td>
+              </tr>
+              <tr>
+                <td>Color Range</td>
+                <td>225</td> <td>897</td> <td>3585</td> <td>57345</td>
+                <td>254</td> <td>1013</td>
+                <td>897</td> <td>3585</td> <td>57345</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="note-image-track-files-white-ref-applies-to-y-component" class="note"><span class="heading-label">NOTE <span class="heading-number">1</span> —⁠ </span>The White Ref level item applies only to the Y’ component, and the Color Range item to the C’<sub>B</sub> and C’<sub>R</sub> components.</p>
+          <p id="note-image-track-files-white-ref-is-occasionally-called-nominal-peak" class="note"><span class="heading-label">NOTE <span class="heading-number">2</span> —⁠ </span>In the case of COLOR.7 or COLOR.8, "White Ref" is occasionally referred to as "Nominal Peak".</p>
+        </section>
+      </section>
+
+      <section id="sec-image-track-files-jpeg2000-picture-sub-descriptor">
+        <h3><span class="heading-label"><span class="heading-number">7.5</span> </span>JPEG 2000 Picture Sub Descriptor<a class="heading-link" href="#sec-image-track-files-jpeg2000-picture-sub-descriptor">🔗</a></h3>
+      
+        <section id="sec-image-track-files-jpeg2000-picture-sub-descriptor-general">
+          <h4><span class="heading-label"><span class="heading-number">7.5.1</span> </span>General<a class="heading-link" href="#sec-image-track-files-jpeg2000-picture-sub-descriptor-general">🔗</a></h4>
+          <p>The Top-Level File Package of the Image Track File shall reference a JPEG 2000 Picture Sub Descriptor <a href="#bib-ST422">SMPTE ST 422:2019</a> as constrained by <a href="#tab-jpeg2000-picture-subdescriptor-items">Table 13</a>.</p>
+          <table id="tab-jpeg2000-picture-subdescriptor-items">
+            <caption><span class="heading-label">Table <span class="heading-number">13</span> — </span>JPEG 2000 Picture Subdescriptor items</caption>
+            <thead>
+              <tr>
+                <th>JPEG 2000 Picture Subdescriptor Item</th>
+                <th>Constraints</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Coding Style</td>
+                <td>Shall be present.</td>
+              </tr>
+              <tr>
+                <td>J2CLayout</td>
+                <td>Shall be present. See <a href="#sec-image-track-files-jpeg2000-picture-sub-descriptor-J2CLayout">7.5.2</a></td>
+              </tr>
+              <tr>
+                <td>J2KExtendedCapabilities</td>
+                <td>Shall be present if ISO/IEC 15544-15 coding is used.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="sec-image-track-files-jpeg2000-picture-sub-descriptor-J2CLayout">
+          <h4><span class="heading-label"><span class="heading-number">7.5.2</span> </span>J2CLayout<a class="heading-link" href="#sec-image-track-files-jpeg2000-picture-sub-descriptor-J2CLayout">🔗</a></h4>
+          <p>The value of the J2CLayout item shall be equal to:</p>
+          <ul>
+            <li><code>{ ‘R’, x, ‘G’, x, ‘B’, x, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }</code> if R’G’B’ sampling is used, where x is the pixel bit depth;
+              or</li>
+            <li><code>{ ‘Y’, x, ‘U’, x, ‘V’, x, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }</code> if Y’C’<sub>B</sub>C’<sub>R</sub> sampling is used where x is the pixel bit depth,
+              respectively</li>
+          </ul>
+
+        </section>
+      </section>
+    </section>
+
+    <section id="sec-composition-clause">
+      <h2><span class="heading-label"><span class="heading-number">8</span> </span>Composition<a class="heading-link" href="#sec-composition-clause">🔗</a></h2>
+
+      <section id="sec-composition-application-identification-subclause">
+        <h3><span class="heading-label"><span class="heading-number">8.1</span> </span>ApplicationIdentification<a class="heading-link" href="#sec-composition-application-identification-subclause">🔗</a></h3>
+        <p>The ApplicationIdentification element (see <a href="#bib-ST2067-2">SMPTE ST 2067-2:2020</a>) shall include the value listed in <a href="#fig-application-identification">Figure 2</a>.</p>
+
+        <figure id="fig-application-identification">
+          <pre data-include="snippets/application-identification.txt">http://www.smpte-ra.org/ns/2067-21/5ED</pre>
+          <figcaption><span class="heading-label">Figure <span class="heading-number">2</span> — </span>Application Identification</figcaption>
+        </figure>
+      </section>
+      
+      <section id="sec-composition-homogeneous-image-essence-subclause">
+        <h3><span class="heading-label"><span class="heading-number">8.2</span> </span>Homogeneous Image Essence<a class="heading-link" href="#sec-composition-homogeneous-image-essence-subclause">🔗</a></h3>
+        <p>Within a given composition, the following shall remain constant:</p>
+        <ul>
+          <li>all image essence characteristics specified in <a href="#sec-image-essence-clause">Clause 6</a>.</li>
+          <li>the JPEG 2000 Encoding Constraints as specified in <a href="#sec-image-essence-encoding-profile-jpeg2000-encoding-constraints">6.5.2</a>.</li>
+        </ul>
+      </section>
+
+      <section id="sec-composition-virtual-tracks-subclause">
+        <h3><span class="heading-label"><span class="heading-number">8.3</span> </span>Virtual Tracks<a class="heading-link" href="#sec-composition-virtual-tracks-subclause">🔗</a></h3>
+
+        <section id="sec-composition-virtual-tracks-main-image-virtual-track-subclause">
+          <h4><span class="heading-label"><span class="heading-number">8.3.1</span> </span>Main Image Virtual Track<a class="heading-link" href="#sec-composition-virtual-tracks-main-image-virtual-track-subclause">🔗</a></h4>
+          <p>All Image Track Files referenced by Resource elements of type StereoImageTrackFileResourceType and type TrackFileResourceType shall conform to <a href="#sec-image-track-files-clause">Clause 7</a>.</p>
+        </section>
+
+        <section id="sec-composition-virtual-tracks-segment-duration-subclause">
+          <h4><span class="heading-label"><span class="heading-number">8.3.2</span> </span>Segment Duration<a class="heading-link" href="#sec-composition-virtual-tracks-segment-duration-subclause">🔗</a></h4>
+          <p>If the average number of audio samples per Composition Edit Unit is not an integer, the duration of each Segment shall be an integer multiple of 5/Composition Edit Rate.</p>
+        </section>
+
+        <section id="sec-composition-virtual-tracks-maxcll-and-maxfall">
+          <h4><span class="heading-label"><span class="heading-number">8.3.3</span> </span>MaxCLL and MaxFALL<a class="heading-link" href="#sec-composition-virtual-tracks-maxcll-and-maxfall">🔗</a></h4>
+          <p>If MainImage conforms to COLOR.6 or COLOR.7, the ExtensionProperties element of the Composition Playlist instance shall include:</p>
+          
+          <ul>
+            <li>zero or one instance of the MaxCLL element specified in <a href="#fig-maxcll-maxfall-elements">Figure 3</a>; and</li>
+            <li>zero or one instance of the MaxFALL element specified in <a href="#fig-maxcll-maxfall-elements">Figure 3</a>.</li>
+          </ul>
+          
+          <figure id="fig-maxcll-maxfall-elements">
+            <pre data-include="snippets/maxcll-maxfall-elements.xml">&lt;xs:element name="MaxCLL" type="xs:unsignedShort"/&gt;
+&lt;xs:element name="MaxFALL" type="xs:unsignedShort"/&gt;</pre>
+            <figcaption><span class="heading-label">Figure <span class="heading-number">3</span> — </span>MaxCLL and MaxFALL elements</figcaption>
+          </figure>
+
+          <p>The MaxCLL and MaxFALL values may be calculated as specified in Annex P.1 and P.2 of <a href="#bib-CTA861G">CTA 861-G</a>, respectively. This calculation shall use the MainImage Virtual Track image essence contained:</p>
+
+          <ul>
+            <li>within the area specified by the Active Area Rectangle; and</li>
+            <li>only from the First Frame of Composition to the Last Frame of Composition, if specified.</li>
+          </ul>
+
+          <p>If the MaxCLL (MaxFALL) value is unknown, then the MaxCLL (MaxFALL) element shall be (i) absent or (ii) set to 0.</p>
+
+          <p>The MaxCLL and MaxFALL values shall be represented in units of 1 cd/m<sup>2</sup>.</p>
+
+          
+        </section>
+      </section>
+    </section>
+
+    <section class="annex" id="sec-itur-bt2020-transfer-characteristic-label">
+      <h2><span class="heading-label">Annex <span class="heading-number">A</span></span><br>ITU-R BT.2020 Transfer Characteristic Label (Normative)<a class="heading-link" href="#sec-itur-bt2020-transfer-characteristic-label">🔗</a></h2>
+      <table id="tab-itur-bt2020-transfer-characteristic-label">
+        <caption><span class="heading-label">Table <span class="heading-number">A.1</span> — </span>ITU-R BT.2020 Transfer Characteristic Label</caption>
+        <thead>
+          <tr>
+            <th>Byte No.</th>
+            <th>Description</th>
+            <th>Value (hex)</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1-7</td> 
+            <td colspan="3">(see Transfer Characteristic node)</td>
+          </tr>
+          <tr>
+            <td>8</td> 
+            <td>Version Number</td>
+            <td>0Eh</td>
+            <td>Registry Version at the point of registration of this label</td>
+          </tr>
+          <tr>
+            <td>9-13</td> 
+            <td colspan="3">(see Transfer Characteristic node)</td>
+          </tr>
+          <tr>
+            <td>14</td> 
+            <td>ITU-R BT.2020 Transfer Characteristic</td>
+            <td>09h</td>
+            <td>Identifies ITU-R BT.2020 transfer characteristic</td>
+          </tr>
+          <tr>
+            <td>15-16</td> 
+            <td></td>
+            <td>00h</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="annex" id="sec-mastering-display-color-volume-metadata">
+      <h2><span class="heading-label">Annex <span class="heading-number">B</span></span><br>Mastering Display Color Volume Metadata (Normative)<a class="heading-link" href="#sec-mastering-display-color-volume-metadata">🔗</a></h2>
+      
+      <section id="sec-mastering-display-color-volume-metadata-general">
+        <h3><span class="heading-label"><span class="heading-number">B.1</span> </span>General<a class="heading-link" href="#sec-mastering-display-color-volume-metadata-general">🔗</a></h3>
+        <p><a href="#tab-color-volume-metadata">Table B.1</a> specifies optional items for the Generic Picture Essence Descriptor (see <a href="#bib-ST377-1">SMPTE ST 377-1:2011</a>) based on the metadata parameters specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a></p>
+
+        <table id="tab-color-volume-metadata">
+          <caption><span class="heading-label">Table <span class="heading-number">B.1</span> — </span>Color Volume Metadata</caption>
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Item Symbol</th>
+              <th>Type</th>
+              <th>Len</th>
+              <th>Local Tag</th>
+              <th>Item UL</th>
+              <th>Req</th>
+              <th>Meaning</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mastering Display Primaries</td>
+              <td>MasteringDisplayPrimaries</td>
+              <td>ThreeColorPrimaries</td>
+              <td>12</td>
+              <td>dyn</td>
+              <td>urn:smpte:ul:060e2b34.0101010e.04200401.0101000</td>
+              <td>Opt</td>
+              <td>Display Primaries metadata as specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a></td>
+              <td>n/a</td>
+            </tr>
+            <tr>
+              <td>Mastering Display White Point Chromaticity</td>
+              <td>MasteringDisplayWhitePointChromaticity</td>
+              <td>ColorPrimary</td>
+              <td>4</td>
+              <td>dyn</td>
+              <td>urn:smpte:ul:060e2b34.0101010e.04200401.0102000</td>
+              <td>Opt</td>
+              <td>Chromaticity of White Point metadata as specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a></td>
+              <td>n/a</td>
+            </tr>
+            <tr>
+              <td>Mastering Display Maximum Luminance</td>
+              <td>MasteringDisplayMaximumLuminance</td>
+              <td>UInt32</td>
+              <td>4</td>
+              <td>dyn</td>
+              <td>urn:smpte:ul:060e2b34.0101010e.04200401.0103000</td>
+              <td>Opt</td>
+              <td>Maximum Display Mastering Luminance metadata as specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a></td>
+              <td>n/a</td>
+            </tr>
+            <tr>
+              <td>Mastering Display Minimum Luminance</td>
+              <td>MasteringDisplayMinimumLuminance</td>
+              <td>UInt32</td>
+              <td>4</td>
+              <td>dyn</td>
+              <td>urn:smpte:ul:060e2b34.0101010e.04200401.0104000</td>
+              <td>Opt</td>
+              <td>Minimum Display Mastering Luminance metadata as specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a></td>
+              <td>n/a</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p id="note-mastering-display-metadata-matches-h265" class="note"><span class="heading-label">NOTE <span class="heading-number"></span> —⁠ </span>The quantization of the metadata parameters match that specified in Section D.2.28 of <a href="#bib-H265">Recommendation ITU-T H.265 (11/2019)</a>.</p>
+      </section>
+
+      <section id="sec-mastering-display-color-volume-metadata-mastering-display-primaries">
+        <h3><span class="heading-label"><span class="heading-number">B.2</span> </span>Mastering Display Primaries<a class="heading-link" href="#sec-mastering-display-color-volume-metadata-mastering-display-primaries">🔗</a></h3>
+        <p>If present, the Mastering Display Primaries item shall be equal to the Display Primaries metadata specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a>.</p>
+        <p>The ColorPrimary type shall consist of two UInt16 elements, in order, the normalized x and y chromaticity coordinates of the color primary in units of 0.00002.</p>
+        <p id="ex-mastering-display-metadata-xy-encoding-example" class="example"><span class="heading-label">EXAMPLE <span class="heading-number"></span> —⁠ </span>The color primary characterized by the (x, y) chromaticity coordinates of (0.6800, 0.3200) is represented by a ColorPrimary value of {34000, 16000}.</p>
+        <p id="note-mastering-display-metadata-colorprimary-precision" class="note"><span class="heading-label">NOTE <span class="heading-number">1</span> —⁠ </span>The elements of a ColorPrimary instance that conforms to the precision specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a> (four decimal places) are multiples of 5 (0.0001 = 0.00002 · 5).</p>
+        <p>The ThreeColorPrimaries type shall be a fixed-size sequence of 3 instances of the ColorPrimary type, for a total of 12 bytes. The ColorPrimary instances should be ordered as follows: (i) instance with the largest x chromaticity coordinate, (ii) instance with the largest y chromaticity coordinate, and (iii) instance with neither the largest y nor the largest x chromaticity coordinate.</p>
+        <p id="note-mastering-display-metadata-recommended-ordering" class="note"><span class="heading-label">NOTE <span class="heading-number">2</span> —⁠ </span>The recommended ordering of the ColorPrimary instances corresponds to RGB ordering in many common cases.</p>
+      </section>
+
+      <section id="sec-mastering-display-color-volume-metadata-mastering-display-white-point-chromaticty">
+        <h3><span class="heading-label"><span class="heading-number">B.3</span> </span>Mastering Display White Point Chromaticity<a class="heading-link" href="#sec-mastering-display-color-volume-metadata-mastering-display-white-point-chromaticty">🔗</a></h3>
+        <p>If present, the Mastering Display White Point Chromaticity item shall be equal to the Chromaticity of White Point metadata specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a>.</p>
+        <p>The ColorPrimary type is specified in <a href="#sec-mastering-display-color-volume-metadata-mastering-display-primaries">Clause B.2</a>.</p>
+      </section>
+
+      <section id="sec-mastering-display-color-volume-metadata-mastering-display-maximum-luminance">
+        <h3><span class="heading-label"><span class="heading-number">B.4</span> </span>Mastering Display Maximum Luminance<a class="heading-link" href="#sec-mastering-display-color-volume-metadata-mastering-display-maximum-luminance">🔗</a></h3>
+        <p>If present, the Mastering Display Maximum Luminance item shall be equal to the Maximum Display Mastering Luminance metadata specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a>.</p>
+        <p>The value Mastering Display Maximum Luminance item shall be expressed in units of 0.0001 cd/m<sup>2</sup>.</p>
+      </section>
+
+      <section id="sec-mastering-display-color-volume-metadata-mastering-display-minimum-luminance">
+        <h3><span class="heading-label"><span class="heading-number">B.5</span> </span>Mastering Display Minimum Luminance<a class="heading-link" href="#sec-mastering-display-color-volume-metadata-mastering-display-minimum-luminance">🔗</a></h3>
+        <p>If present, the Mastering Display Minimum Luminance item shall be equal to the Minimum Display Mastering Luminance metadata specified in <a href="#bib-ST2086">SMPTE ST 2086:2018</a>.</p>
+        <p>The value Mastering Display Minimum Luminance item shall be expressed in units of 0.0001 cd/m<sup>2</sup>.</p>
+      </section>
+
+      <section id="sec-mastering-display-color-volume-metadata-mastering-display-examples">
+        <h3><span class="heading-label"><span class="heading-number">B.6</span> </span>Examples (Informative)<a class="heading-link" href="#sec-mastering-display-color-volume-metadata-mastering-display-examples">🔗</a></h3>
+        <p><a href="#tab-example-values-for-the-mastering-display-color-volume-metadata">Table B.2</a> lists example values for the items specified in <a href="#tab-color-volume-metadata">Table B.1</a>.</p>
+
+        <table id="tab-example-values-for-the-mastering-display-color-volume-metadata">
+          <caption><span class="heading-label">Table <span class="heading-number">B.2</span> — </span>Example values for the Mastering Display Color Volume Metadata (Informative)</caption>
+
+          <thead>
+            <tr>
+              <th colspan="1">Item</th>
+              <th colspan="2">Example Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mastering Display White Point Chromaticity</td>
+              <td>Illuminant D65 specified in <a href="#bib-RP177">SMPTE RP 177:1993</a></td>
+              <td>{ 15635, 16450 }</td>
+            </tr>
+            <tr>
+              <td rowspan="3">Mastering Display Primaries</td>
+              <td>Color primaries specified in <a href="#bib-BT709">Recommendation ITU-R BT.709-6</a></td>
+              <td>
+                <p>{ 32000, 16500 }</p>
+                <p>{ 15000, 30000 }</p>
+                <p>{ 7500, 3000 }</p>
+              </td>
+            </tr>
+            <tr>
+              <td>Color primaries specified in <a href="#bib-BT2020">Recommendation ITU-R BT.2020-2</a></td>
+              <td>
+                <p>{ 35400, 14600 }</p>
+                <p>{ 8500, 39850 }</p>
+                <p>{ 6550, 2300 }</p>
+              </td>
+            </tr>
+            <tr>
+              <td>Color primaries of the P3D65 system specified in <a href="#bib-ST2113">SMPTE ST 2113:2018</a></td>
+              <td>
+                <p>{ 34000, 16000 }</p>
+                <p>{ 13250, 34500 }</p>
+                <p>{ 7500, 3000 }</p>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">Mastering Display Maximum Luminance</td>
+              <td>Reference white in <a href="#bib-BT2035">Recommendation ITU-R BT.2035</a></td>
+              <td>1000000</td>
+            </tr>
+            <tr>
+              <td>Mastering display with a maximum luminance of 4000 cd/m<sup>2</sup></td>
+              <td>40000000</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Mastering Display Minimum Luminance</td>
+              <td>Reference black in <a href="#bib-BT2035">Recommendation ITU-R BT.2035</a></td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Mastering display with a minimum luminance of 0.005 cd/m<sup>2</sup></td>
+              <td>50</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+
+    </section>
+
+    <section class="annex" id="sec-smpte-st2084-transfer-characteristic-label">
+      <h2><span class="heading-label">Annex <span class="heading-number">C</span></span><br>SMPTE ST 2084 Transfer Characteristic Label (Normative)<a class="heading-link" href="#sec-smpte-st2084-transfer-characteristic-label">🔗</a></h2>
+
+      <table id="tab-smpte-st2084-transfer-characteristic-label">
+        <caption><span class="heading-label">Table <span class="heading-number">C.1</span> — </span>SMPTE ST 2084 Transfer Characteristic Label</caption>
+        <thead>
+          <tr>
+            <th>Byte No.</th>
+            <th>Description</th>
+            <th>Value (hex)</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1-7</td>
+            <td colspan="3">(see Transfer Characteristic node)</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Version Number</td>
+            <td>0Dh</td>
+            <td>Registry Version at the point of registration of this label</td>
+          </tr>
+          <tr>
+            <td>9-13</td>
+            <td colspan="3">(see Transfer Characteristic node)</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>SMPTE ST 2084 Transfer Characteristic</td>
+            <td>0Ah</td>
+            <td>Identifies the transfer characteristics as specified in <a href="#bib-ST2084">SMPTE ST 2084:2014</a></td>
+          </tr>
+          <tr>
+            <td>15-16</td>
+            <td></td>
+            <td>00h</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="annex" id="sec-itur-bt2020-non-constant-luminance-coding-equations-label">
+      <h2><span class="heading-label">Annex <span class="heading-number">D</span></span><br>ITU-R BT.2020 Non-Constant Luminance Coding Equations Label (Normative)<a class="heading-link" href="#sec-itur-bt2020-non-constant-luminance-coding-equations-label">🔗</a></h2>
+
+      <table id="tab-itur-bt2020-non-constant-luminance-coding-equations-label">
+        <caption><span class="heading-label">Table <span class="heading-number">D.1</span> — </span>ITU-R BT.2020 Non-Constant Luminance Coding Equations Label</caption>
+        <thead>
+          <tr>
+            <th>Byte No.</th>
+            <th>Description</th>
+            <th>Value (hex)</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1-7</td>
+            <td colspan="3">(see Coding Equations node)</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Version Number</td>
+            <td>0Dh</td>
+            <td>Registry Version at the point of registration of this label</td>
+          </tr>
+          <tr>
+            <td>9-13</td>
+            <td colspan="3">(see Coding Equations node)</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>ITU-R BT.2020 Non-Constant Luminance Coding Equations</td>
+            <td>06h</td>
+            <td>Identifies ITU-R BT.2020 coding equations for non-constant luminance</td>
+          </tr>
+          <tr>
+            <td>15-16</td>
+            <td></td>
+            <td>00h</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="annex informative" id="sec-recommended-selection-of-jpeg2000-profiles">
+      <h2><span class="heading-label">Annex <span class="heading-number">E</span></span><br>Recommended selection of JPEG 2000 Profiles (Informative)<a class="heading-link" href="#sec-recommended-selection-of-jpeg2000-profiles">🔗</a></h2>
+      <p>This annex provides guidance for selecting the appropriate JPEG 2000 profiles based on the characteristics of the image essence.</p>
+      <p>If image essence conforms to the following parameters, a broadcast application profile (as defined in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a>) might be used. Refer to <a href="#tab-broadcast-contribution-profile-levels-used-in-imf-app2e">Table E.1</a>. If any of these are exceeded, an IMF profile is the appropriate choice. Refer to <a href="#tab-imf-profile-mainlevels-used-by-imf-app2e">Table E.2</a> and <a href="#tab-imf-profile-sublevels-used-by-imf-app2e">Table E.3</a>.</p>
+      <p>Broadcast application profiles support:</p>
+      <ul>
+        <li>a maximum frame dimension of 3840 x 2160 pixels;</li>
+        <li>a maximum 12-bit color depth;</li>
+        <li>a maximum compressed bit rate of 800 Mbit/s for non-reversible profile;</li>
+        <li>a maximum components sampling rate of 520 MSamples/s</li>
+      </ul>  
+
+      <p>Note that in this standard there are many combinations of image characteristics where a profile from either the broadcast application profile sets or IMF profile sets might be applicable.</p>
+
+      <p>To determine maximum components sampling rate:</p>
+      <p>M = (W x H x F x A) / 1,000,000</p>
+      <p>where:</p>
+      <p>M is MegaSamples per second (Msamples/s)</p>
+      <p>W is Frame Width, in pixels</p>
+      <p>H is Image Frame Height, in pixels</p>
+      <p>F is Frame Rate, per second</p>
+      <p>A is average number of color components per pixel (2 for 4:2:2, 3 for 4:4:4)</p>
+      <p id="ex-bitrace-calculation" class="example"><span class="heading-label">EXAMPLE <span class="heading-number"></span> —⁠ </span>(3840 x 2160 x 24000/1001 x 2) / 1,000,000 = 397.7330688 MSamples/s.</p>
+      <p>In this example, a user might select either BCP Level 5 or 4k IMF Single Tile Lossy Profile Mainlevel 5 for nonreversible workflows or either BCP Level 7 or 4k IMF Single/Multi-tile Reversible Profile Mainlevel 5 (Sublevel 0) for reversible workflows.</p>
+      
+      <table id="tab-broadcast-contribution-profile-levels-used-in-imf-app2e">
+        <caption><span class="heading-label">Table <span class="heading-number">E.1</span> — </span>Broadcast Contribution Profile Levels used in IMF App2E</caption>
+        <thead>
+          <tr>
+            <th>Levels</th>
+            <th>Max. Sampling Rate (MSamples/s)</th>
+            <th>Max. compressed Bit Rate (Mbits/s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Broadcast Single Tile Profile Level 1</td><td>65</td><td>200</td></tr>
+          <tr><td>Broadcast Single Tile Profile Level 2</td><td>130</td><td>200</td></tr>
+          <tr><td>Broadcast Single Tile Profile Level 3</td><td>195</td><td>200</td></tr>
+          <tr><td>Broadcast Single Tile Profile Level 4</td><td>260</td><td>400</td></tr>
+          <tr><td>Broadcast Single Tile Profile Level 5</td><td>520</td><td>800</td></tr>
+          <tr><td>Broadcast Multi-Tile Reversible Profile Level 7</td><td>520</td><td>Unspecified *</td></tr>
+        </tbody>
+      </table>
+      <p>*Reversible compression</p>
+
+      <table id="tab-imf-profile-mainlevels-used-by-imf-app2e">
+        <caption><span class="heading-label">Table <span class="heading-number">E.2</span> — </span>IMF Profile Mainlevels used by IMF App2E</caption>
+        <thead>
+          <tr>
+            <th>Mainlevel</th>
+            <th>Max. Sampling Rate (MSamples/s)</th>
+            <th>Available Sublevels for lossy profiles</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mainlevel 1</td><td>65</td><td>Sublevel 1</td></tr>
+          <tr><td>Mainlevel 2</td><td>130</td><td>Sublevel 1</td></tr>
+          <tr><td>Mainlevel 3</td><td>195</td><td>Sublevel 1</td></tr>
+          <tr><td>Mainlevel 4</td><td>260</td><td>Sublevels 1-2</td></tr>
+          <tr><td>Mainlevel 5</td><td>520</td><td>Sublevels 1-3</td></tr>
+          <tr><td>Mainlevel 6</td><td>1200</td><td>Sublevels 1-4</td></tr>
+          <tr><td>Mainlevel 7</td><td>2400</td><td>Sublevels 1-5</td></tr>
+          <tr><td>Mainlevel 8</td><td>4800</td><td>Sublevels 1-6</td></tr>
+          <tr><td>Mainlevel 9</td><td>9600</td><td>Sublevels 1-7</td></tr>
+          <tr><td>Mainlevel 10</td><td>19200</td><td>Sublevels 1-8</td></tr>
+        </tbody>
+      </table>
+
+      <table id="tab-imf-profile-sublevels-used-by-imf-app2e">
+        <caption><span class="heading-label">Table <span class="heading-number">E.3</span> — </span>IMF Profile Sublevels used by IMF App2E</caption>
+        <thead>
+          <tr>
+            <th>Sublevels</th>
+            <th>Max. compressed Bit Rate (Mbit/s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Sublevel 1</td><td>200</td></tr>
+          <tr><td>Sublevel 2</td><td>400</td></tr>
+          <tr><td>Sublevel 3</td><td>800</td></tr>
+          <tr><td>Sublevel 4</td><td>1600</td></tr>
+          <tr><td>Sublevel 5</td><td>3200</td></tr>
+          <tr><td>Sublevel 6</td><td>6400</td></tr>
+          <tr><td>Sublevel 7</td><td>12800</td></tr>
+          <tr><td>Sublevel 8</td><td>25600</td></tr>
+          <tr><td>Sublevel 0</td><td>Unspecified *</td></tr>
+        </tbody>
+      </table>
+      <p>*only used for reversible profiles in IMF App2E</p>
+
+      <p>Users are encouraged to select the smallest level, for broadcast application profiles, or Mainlevel and Sublevel, for IMF profiles, that meets the requirements for image frame dimensions, color depth, components sampling rate and, for non-reversible compression, compressed bit rate. This allows implementations to optimally allocate resources when processing the image essence.</p>
+      
+      <p>It is recommended that the sampling rate and maximum bit rate used in determining the profiles be increased by 5% to allow for speed-up of the image, e.g. 24fps to 25fps, without having to update profile metadata in both the codestream and Track File.</p>
+    </section>
+
+    <section class="annex" id="sec-additional-jpeg2000-picture-essence-compression-labels">
+      <h2><span class="heading-label">Annex <span class="heading-number">F</span></span><br>Additional JPEG 2000 Picture Essence Compression Labels (Normative)<a class="heading-link" href="#sec-additional-jpeg2000-picture-essence-compression-labels">🔗</a></h2>
+
+      <table id="tab-additional-jpeg2000-picture-essence-compression-labels">
+        <caption><span class="heading-label">Table <span class="heading-number">F.1</span> — </span>Additional JPEG 2000 Picture Essence Compression Labels</caption>
+        <thead>
+          <tr>
+            <th>Byte No.</th> 
+            <th>Description</th>
+            <th>Value (hex)</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1-7</td>
+            <td colspan="3">See <a href="#bib-ST422">SMPTE ST 422:2019</a></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Version Number</td>
+            <td>0Dh</td>
+            <td>Registry Version at the point of registration of this label</td>
+          </tr>
+          <tr>
+            <td>9-15</td>
+            <td colspan="3">See <a href="#bib-ST422">SMPTE ST 422:2019</a></td>
+          </tr>
+          <tr>
+            <td rowspan="7">16</td>
+            <td>Broadcast Contribution Single Tile Profile Level 1</td>
+            <td>11h</td>
+            <td>Broadcast Contribution Single Tile Profile Level 1 as specified in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a></td>
+          </tr>
+          <tr>
+            <td>Broadcast Contribution Single Tile Profile Level 2</td>
+            <td>12h</td>
+            <td>Broadcast Contribution Single Tile Profile Level 2 as specified in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a></td>
+          </tr>
+          <tr>
+            <td>Broadcast Contribution Single Tile Profile Level 3</td>
+            <td>13h</td>
+            <td>Broadcast Contribution Single Tile Profile Level 3 as specified in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a></td>
+          </tr>
+          <tr>
+            <td>Broadcast Contribution Single Tile Profile Level 4</td>
+            <td>14h</td>
+            <td>Broadcast Contribution Single Tile Profile Level 4 as specified in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a></td>
+          </tr>
+          <tr>
+            <td>Broadcast Contribution Single Tile Profile Level 5</td>
+            <td>15h</td>
+            <td>Broadcast Contribution Single Tile Profile Level 5 as specified in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a></td>
+          </tr>
+          <tr>
+            <td>Broadcast Contribution Multitile Reversible Profile Level 6</td>
+            <td>16h</td>
+            <td>Broadcast Contribution Multi-tile Reversible Profile Level 6 as specified in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a></td>
+          </tr>
+          <tr>
+            <td>Broadcast Contribution Multitile Reversible Profile Level 7</td>
+            <td>17h</td>
+            <td>Broadcast Contribution Multi-tile Reversible Profile Level 7 as specified in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="annex informative" id="sec-image-frame-and-active-area-rectangle-examples">
+      <h2><span class="heading-label">Annex <span class="heading-number">G</span></span><br>Image Frame And Active Area Rectangle Examples (Informative)<a class="heading-link" href="#sec-image-frame-and-active-area-rectangle-examples">🔗</a></h2>
+      
+      <p>This specification allows the user to choose which rectangular subset of an input image to store and which portion of the resulting stored image to identify as the Active Area Rectangle.</p>
+      
+      <p><a href="#fig-high-definition-progressive-frame-active-area-rectangle-examples">Figure G.1</a> and <a href="#tab-selected-property-values-for-the-examples-of-figure-h1">Table G.1</a> depict selected examples using HD progressive image frames. As shown in (a) and (b), two different users or the same user in different circumstances can elect to identify different portions of the same image as the Active Area Rectangle. In (c), only the Active Area Rectangle is stored. As illustrated by (b), the extent of the Display Rectangle is not specified and left to users: <a href="#tab-selected-property-values-for-the-examples-of-figure-h1">Table G.1</a> lists two valid sets of Display Rectangle and Active Area Rectangle values for (b).</p>
+
+      <p>The process by which the dimensions of the stored image and active area are set depends on individual workflows and can include a combination of manual and automated processing during and after ingest.</p>
+
+      <figure id="fig-high-definition-progressive-frame-active-area-rectangle-examples">
+        <img class="figure" src="media/active-area-20130224.svg">
+        <figcaption><span class="heading-label">Figure <span class="heading-number">G.1</span> — </span>High-Definition Progressive Frame Active Area Rectangle Examples</figcaption>
+      </figure>
+
+      <table id="tab-selected-property-values-for-the-examples-of-figure-h1">
+        <caption><span class="heading-label">Table <span class="heading-number">G.1</span> — </span>Selected Property Values for the Examples of <a href="#fig-high-definition-progressive-frame-active-area-rectangle-examples">Figure G.1</a></caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th><a href="#fig-high-definition-progressive-frame-active-area-rectangle-examples">Figure G.1</a>a</th>
+            <th><a href="#fig-high-definition-progressive-frame-active-area-rectangle-examples">Figure G.1</a>b</th>
+            <th><a href="#fig-high-definition-progressive-frame-active-area-rectangle-examples">Figure G.1</a>b</th>
+            <th><a href="#fig-high-definition-progressive-frame-active-area-rectangle-examples">Figure G.1</a>c</th>
+            <th><a href="#fig-high-definition-progressive-frame-active-area-rectangle-examples">Figure G.1</a>d</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Stored Height</td><td>1080</td><td>1080</td><td>1080</td><td>800</td><td>1080</td></tr>
+          <tr><td>Stored Width</td><td>1920</td><td>1920</td><td>1920</td><td>1920</td><td>1920</td></tr>
+          <tr><td>Sampled Height</td><td>1080</td><td>1080</td><td>1080</td><td>800</td><td>1080</td></tr>
+          <tr><td>Sampled Width</td><td>1920</td><td>1920</td><td>1920</td><td>1920</td><td>1920</td></tr>
+          <tr><td>Sampled X Offset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Sampled Y Offset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Display Height</td><td>1080</td><td>800</td><td>1080</td><td>800</td><td>1080</td></tr>
+          <tr><td>Display Width</td><td>1920</td><td>1920</td><td>1920</td><td>1920</td><td>1920</td></tr>
+          <tr><td>Display X Offset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Display Y Offset</td><td>0</td><td>140</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Aspect Ratio</td><td>16/9</td><td>12/5</td><td>16/9</td><td>12/5</td><td>16/9</td></tr>
+          <tr><td>Active Height</td><td>1080</td><td>800</td><td>800</td><td>800</td><td>1080</td></tr>
+          <tr><td>Active Width</td><td>1920</td><td>1920</td><td>1920</td><td>1920</td><td>1920</td></tr>
+          <tr><td>Active X Offset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Active Y Offset</td><td>0</td><td>0</td><td>140</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+
+      <p><a href="#fig-standard-definition-interlaced-frame-examples">Figure G.2</a> and <a href="#tab-selected-property-values-for-the-examples-of-figure-h2">Table G.2</a> depict three means of storing the same source SD interlaced anamorphic image frame. The source image frame contains a 720x576 container as well as vertical blanking interval (VBI) information. The container is intended to be displayed at a 16:9 aspect ratio and contains a 2.40 Active Area Rectangle. In (a), the entire source image frame is ingested, including VBI information, which is not included in the Display Rectangle, as specified by <a href="#bib-ST377-1">SMPTE ST 377-1:2011</a>. In contrast to (a), the VBI information is not stored in (b). In (c), the Aspect Ratio property value is computed to preserve the exact pixel aspect ratio of the source image.</p>
+
+      <figure id="fig-standard-definition-interlaced-frame-examples">
+        <img class="figure" src="media/active-area-20130224-2.svg">
+        <figcaption><span class="heading-label">Figure <span class="heading-number">G.2</span> — </span>Standard Definition Interlaced Frame Examples</figcaption>
+      </figure>
+
+      <table id="tab-selected-property-values-for-the-examples-of-figure-h2">
+        <caption><span class="heading-label">Table <span class="heading-number">G.2</span> — </span>Selected Property Values for the Examples of <a href="#fig-standard-definition-interlaced-frame-examples">Figure G.2</a></caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th><a href="#fig-standard-definition-interlaced-frame-examples">Figure G.2</a>a</th>
+            <th><a href="#fig-standard-definition-interlaced-frame-examples">Figure G.2</a>b</th>
+            <th><a href="#fig-standard-definition-interlaced-frame-examples">Figure G.2</a>c</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Stored Height</td><td>304</td><td>288</td><td>213</td></tr>
+          <tr><td>Stored Width</td><td>720</td><td>720</td><td>720</td></tr>
+          <tr><td>Sampled Height</td><td>304</td><td>288</td><td>213</td></tr>
+          <tr><td>Sampled Width</td><td>720</td><td>720</td><td>720</td></tr>
+          <tr><td>Sampled X Offset</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Sampled Y Offset</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Display Height</td><td>288</td><td>288</td><td>213</td></tr>
+          <tr><td>Display Width</td><td>720</td><td>720</td><td>720</td></tr>
+          <tr><td>Display X Offset</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Display Y Offset</td><td>16</td><td>0</td><td>0</td></tr>
+          <tr><td>Aspect Ratio</td><td>16/9</td><td>16/9</td><td>512/213</td></tr>
+          <tr><td>Active Height</td><td>213</td><td>213</td><td>213</td></tr>
+          <tr><td>Active Width</td><td>720</td><td>720</td><td>720</td></tr>
+          <tr><td>Active X Offset</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Active Y Offset</td><td>37</td><td>37</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  <section class="annex" id="sec-isoiec-15444-15-htj2k-codestream-constraints">
+      <h2><span class="heading-label">Annex <span class="heading-number">H</span></span><br>ISO/IEC 15444-15 HT-J2K Codestream Constraints (Normative)<a class="heading-link" href="#sec-isoiec-15444-15-htj2k-codestream-constraints">🔗</a></h2>
+
+      <p>The HT-J2K encoding shall follow the constraints listed in <a href="#tab-htj2k-constraints">Table H.1</a>.</p>
+
+      <table id="tab-htj2k-constraints">
+        <caption><span class="heading-label">Table <span class="heading-number">H.1</span> — </span>Additional JPEG 2000 Picture Essence Compression Labels</caption>
+        <thead>
+          <tr>
+            <th>Item</th> 
+            <th>IMF App2e HTJ2K Reversible Constraints (APP2.HT.REV)</th>
+            <th>IMF App2e HTJ2K Irreversible Constraints (APP2.HT.IRV)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Codestream</td>
+            <td colspan="2">Shall be an HTJ2K codestream as defined in <a href="#bib-HTJ2K">ISO/IEC 15444-15:2019</a></td>
+          </tr>
+          <tr>
+            <td rowspan="3">Capabilities</td>
+            <td colspan="2">No capabilities other than those specified in <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a> and <a href="#bib-HTJ2K">ISO/IEC 15444-15:2019</a> Pcap<sup>i</sup> is 1 for i = 15, and 0 otherwise.</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p>Bits of Ccap<sup>15</sup> corresponding to the selected constrained codestream sets must be set.</p>
+              <p>
+                Bits 14-15 of Ccap<sup>15</sup> shall be zero (HTONLY)<br>
+                Bit 13 of Ccap<sup>15</sup> shall be zero (SINGLEHT)<br>
+                Bit 12 of Ccap<sup>15</sup> shall be zero (RGNFREE)<br>
+                Bit 11 of Ccap<sup>15</sup> shall be zero (HOMOGENEOUS)
+              </p>
+              <p>Bits 0-4 of Ccap<sup>15</sup> shall be set according to the MAGB<sub>P</sub> parameter</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Bit 5 of Ccap<sup>15</sup> shall be zero (HTREV)</td>
+            <td>Bit 5 of Ccap<sup>15</sup> shall be one (HTIRV)</td>
+          </tr>
+          <tr>
+            <td>Tile</td>
+            <td colspan="2">One tile for the whole image, with<br>
+              YTsiz + YTOsiz ≥ Ysiz<br>
+              XTsiz + XTOsiz ≥ Xsiz</td>
+          </tr>
+          <tr>
+            <td>Image and tile origin</td>
+            <td colspan="2">XOsiz = YOsiz = XTOsiz = YTOsiz = 0</td>
+          </tr>
+          <tr>
+            <td>Sub-sampling</td>
+            <td colspan="2">(XRsiz<sup>i</sup> = 1 for all i) or (Xrsiz<sup>i</sup>=2 for i = {2,3} and XRsiz<sup>i</sup>=1 for other i)<br>
+              YRsiz<sup>i</sup>=1 for all i</td>
+          </tr>
+          <tr>
+            <td>Number of components</td>
+            <td colspan="2">Csiz ≤ 4</td>
+          </tr>
+          <tr>
+            <td>Bitdepth</td>
+            <td colspan="2">7 ≤ Ssiz<sup>i</sup> ≤ 15<br>
+              Within a codestream, all components shall have identical Ssiz<sup>i</sup></td>
+          </tr>
+          <tr>
+            <td>PPM marker</td>
+            <td colspan="2">Shall not be present</td>
+          </tr>
+          <tr>
+            <td>Number of layers</td>
+            <td colspan="2">Shall be exactly 1</td>
+          </tr>
+          <tr>
+            <td>Number of decomposition levels</td>
+            <td colspan="2">
+              <p>1 ≤ N<sub>L</sub> ≤ 5 for max(Xsiz,Ysiz) ≤ 2048</p>
+              <p>1 ≤ N<sub>L</sub> ≤ 6 for 2049 ≤ max(Xsiz,Ysiz) ≤ 4096</p>
+              <p>1 ≤ N<sub>L</sub> ≤ 7 for 4097 ≤ max(Xsiz,Ysiz) ≤ 8192</p>
+              <p>Within a codestream, all components shall have the same number of decomposition levels</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Code-block size</td>
+            <td colspan="2">5 ≤ xcb ≤ 7 and 5 ≤ ycb ≤ 6<br>
+              Within a codestream, all components shall have identical codeblock sizes.</td>
+          </tr>
+          <tr>
+            <td>Code-block style</td>
+            <td colspan="2">0100 0000</td>
+          </tr>
+          <tr>
+            <td>Transformation</td>
+            <td>5-3 reversible transform</td>
+            <td>9-7 irreversible transform</td>
+          </tr>
+          <tr>
+            <td>Precinct size</td>
+            <td colspan="2">PPx = PPy = 7 for N<sub>L</sub>LL band, else 8</td>
+          </tr>
+          <tr>
+            <td>Progression order</td>
+            <td colspan="2">RPCL</td>
+          </tr>
+          <tr>
+            <td>Tile-parts</td>
+            <td colspan="2">
+              <p>one tile part per resolution</p>
+            </td>
+          </tr>
+          <tr>
+            <td>TLM marker</td>
+            <td colspan="2">Shall be present</td>
+          </tr>
+          <tr>
+            <td>POC marker</td>
+            <td colspan="2">Shall not be present</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Constrained codestream sets</td>
+            <td colspan="2">Shall belong to the following sets:<br>
+              HTONLY, SINGLEHT, RGNFREE, HOMOGENEOUS, LOCAL</td>
+          </tr>
+          <tr>
+            <td>
+              <p>HTREV</p>
+              <p>MAGB<sub>P</sub> per parameter B calculated according to <a href="#tab-parameter-b-for-app2htrev-constraints">Table H.2</a></p>
+            </td>
+            <td>
+              <p>HTIRV</p>
+              <p>MAGB<sub>P</sub> per parameter B shall be equal to or less than 31</p>
+              <p>MAGB<sub>P</sub> per parameter B should be equal to or less than the values calculated according to <a href="#tab-parameter-b-for-app2htirv-constraints">Table H.3</a></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table id="tab-parameter-b-for-app2htrev-constraints">
+        <caption><span class="heading-label">Table <span class="heading-number">H.2</span> — </span>Parameter B for APP2.HT.REV Constraints</caption>
+        <thead>
+          <tr>
+            <th rowspan="3">Ssiz<sup>i</sup></th>
+            <th colspan="3">Parameter B</th>
+          </tr>
+          <tr>
+            <th rowspan="2">
+              SGcod.C = 0<br>
+              N<sub>L</sub> ≤ 5
+            </th>
+            <th>
+              SGcod.C = 0<br>
+              N<sub>L</sub> &gt; 5
+            </th>
+            <th rowspan="2">
+              SGcod.C = 1<br>
+              N<sub>L</sub> &gt; 5
+            </th>
+          </tr>
+          <tr>
+            <th>
+              SGcod.C = 1<br>
+              N<sub>L</sub> ≤ 5
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>7</td><td>11</td><td>12</td><td>13</td></tr>
+          <tr><td>9</td><td>13</td><td>14</td><td>15</td></tr>
+          <tr><td>11</td><td>15</td><td>16</td><td>17</td></tr>
+          <tr><td>15</td><td>19</td><td>20</td><td>21</td></tr>
+        </tbody>
+      </table>
+
+      <table id="tab-parameter-b-for-app2htirv-constraints">
+        <caption><span class="heading-label">Table <span class="heading-number">H.3</span> — </span>Parameter B for APP2.HT.IRV Constraints</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th colspan="2">Parameter B</th>
+          </tr>
+          <tr>
+            <th>Ssiz<sup>i</sup></th>
+            <th>SGcod.C = 0</th>
+            <th>SGcod.C = 1</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>7</td><td>9</td><td>9</td></tr>
+          <tr><td>9</td><td>11</td><td>11</td></tr>
+          <tr><td>11</td><td>13</td><td>14</td></tr>
+          <tr><td>15</td><td>17</td><td>18</td></tr>
+        </tbody>
+      </table>
+
+      <p id="note-htj2k-constraints-sgcodc-is-multiple-component-transform" class="note"><span class="heading-label">NOTE <span class="heading-number">1</span> —⁠ </span>As specified at <a href="#bib-J2K1">ISO/IEC 15444-1:2019</a>, SGcod.C indicates whether the multiple component transformation is used.</p>
+      <p id="note-htj2k-constraints-relationship-between-parameter-b-and-magb" class="note"><span class="heading-label">NOTE <span class="heading-number">2</span> —⁠ </span>Table 4 at <a href="#bib-HTJ2K">ISO/IEC 15444-15:2019</a> specifies the relationship between parameter B and MAGB<sub>P</sub> codestream sets.</p>
+      <p id="note-htj2k-constraints-rpcl-enables-best-effort" class="note"><span class="heading-label">NOTE <span class="heading-number">3</span> —⁠ </span>Using RPCL progression order allows reduced-resolution decoding of codestreams in throughput-limited and -varying environments with a single contiguous read operation of a partial codestream.</p>
+      <p id="note-htj2k-constraints-conformance-to-local-is-implied-with-precinct-signaling-and-a-single-quality-layer" class="note"><span class="heading-label">NOTE <span class="heading-number">4</span> —⁠ </span>Conformance to the constrained codestream set LOCAL is implied by the signaling of other HTJ2K constraints Precinct Size = [PPx = PPy = 7 for N<sub>L</sub>LL band, else 8] and Number of layers = 1</p>
+      <p id="note-htj2k-constraints-motivation-for-small-magbp" class="note"><span class="heading-label">NOTE <span class="heading-number">5</span> —⁠ </span>A decoder can increase throughput by using a hardware-accelerated implementation if the HT cleanup magnitudes are below a given threshold, i.e., if the HTJ2K codestream belongs to a set where parameter B is below a certain threshold; and reverting to a slower software implementation otherwise. Thus HTJ2K encoders are encouraged to use a value of parameter B that is as small as possible, like those values described in <a href="#tab-parameter-b-for-app2htirv-constraints">Table H.3</a></p>
+
+      <p>Example encoder commands that generate JPEG 2000 Part-15 (HTJ2K) codestreams that satisfy these constraints are included in <a href="#sec-example-encoder-commands">Annex I</a>.</p>
+
+  </section>
+    
+  <section class="annex informative" id="sec-example-encoder-commands">
+    <h2><span class="heading-label">Annex <span class="heading-number">I</span></span><br>Example JPEG 2000 encoder commands (Informative)<a class="heading-link" href="#sec-example-encoder-commands">🔗</a></h2>
+
+    <section id="sec-example-encoder-commands-general">
+      <h3><span class="heading-label"><span class="heading-number">I.1</span> </span>General<a class="heading-link" href="#sec-example-encoder-commands-general">🔗</a></h3>
+      <p>The tables in this Annex contain example encoder commands that generate compressed JPEG 2000 codestreams.  In the examples, the filename represented by <code>${INPUT_TIF_FILE}</code> is a 16bit TIF file.</p>  
+        
+        <p>The examples were generated with the most current version of each encoder library available at the time of publication and these versions are listed in the caption of each table.</p>
+    </section>
+
+    <section id="sec-example-encoder-commands-kakadu">
+      <h3><span class="heading-label"><span class="heading-number">I.2</span> </span>Kakadu<a class="heading-link" href="#sec-example-encoder-commands-kakadu">🔗</a></h3>
+      <p><a href="#bib-kakadu">Kakadu</a> is a commercial software libary that supports encoding and decoding JPEG 2000 Part-1 and JPEG 2000 Part-15 (HTJ2K) codestreams.</p>
+
+      <table id="table-encoder-kdu-j2k1">
+        <caption><span class="heading-label">Table <span class="heading-number">I.1</span> — </span>Example JPEG 2000 Part-1 encoder commands for Kakadu Software demo app <code>kdu_compress</code> version 8.4.1</caption>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Example Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HD 4:4:4 10bit Lossless</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 10M Sbroadcast="{7,multi,rev}"</pre></td>
+          </tr>
+          <tr>
+            <td> HD 4:4:4 Lossy 10bit VBR with 250Mbs Maximum @ 24fps</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 10M Sbroadcast="{4,single,irrev}" Creslengths=1302083 -slope 41808 Qstep=0.0009765625</pre></td>
+          </tr>
+          <tr>
+            <td>4K 4:4:4 12bit Lossless</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 12M Simf="{6,0,rev}"</pre></td>
+          </tr>
+          <tr>
+            <td>8K 4:4:4 16bit Lossless</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 16M Simf="{8,0,rev}"</pre></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table id="table-encoder-kdu-htj2k">
+        <caption><span class="heading-label">Table <span class="heading-number">I.2</span> — </span>Example JPEG 2000 Part-15 (HTJ2K) encoder commands for Kakadu Software demo app <code>kdu_compress</code> version 8.4.1</caption>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Example Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HD 4:4:4 Lossy 10bit VBR HTJ2K</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 10M Creversible=no Corder=RPCL Cblk="{32,128}" Cmodes=HT ORGtparts=R Clevels=5 ORGgen_tlm=6 Cprecincts="{256,256},{256,256},{256,256},{256,256},{256,256},{128,128}" Qfactor=95</pre></td>
+          </tr>
+          <tr>
+            <td>HD 4:4:4 Lossless 10bit HTJ2K</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 10M Creversible=yes Corder=RPCL Cblk="{32,128}" Cmodes=HT ORGtparts=R Clevels=5 ORGgen_tlm=6 Cprecincts="{256,256},{256,256},{256,256},{256,256},{256,256},{128,128}"</pre></td>
+          </tr>
+          <tr>
+            <td>4K 4:4:4 12bit Lossless HTJ2K</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 12M Creversible=yes Corder=RPCL Cblk="{32,128}" Cmodes=HT ORGtparts=R Clevels=6 ORGgen_tlm=7 Cprecincts="{256,256},{256,256},{256,256},{256,256},{256,256},{256,256},{128,128}"</pre></td>
+          </tr>
+          <tr>
+            <td>4K 4:4:4 12bit Lossy VBR HTJ2K</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 12M Creversible=no Corder=RPCL Cblk="{32,128}" Cmodes=HT ORGtparts=R Clevels=6 ORGgen_tlm=7 Cprecincts="{256,256},{256,256},{256,256},{256,256},{256,256},{256,256},{128,128}" Qfactor=95</pre></td>
+          </tr>
+          <tr>
+            <td>8K 4:4:4 12bit Lossless HTJ2K</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 12M Creversible=yes Corder=RPCL Cblk="{32,128}" Cmodes=HT ORGtparts=R Clevels=7 ORGgen_tlm=8 Cprecincts="{256,256},{256,256},{256,256},{256,256},{256,256},{256,256},{256,256},{128,128}"</pre></td>
+          </tr>
+          <tr>
+            <td>8K Lossy 12bit CBR HTJ2K</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 12M Creversible=no Corder=RPCL Cblk="{32,128}" Cmodes=HT ORGtparts=R Clevels=7 ORGgen_tlm=8 Cprecincts="{256,256},{256,256},{256,256},{256,256},{256,256},{256,256},{256,256},{128,128}" Cplex="{6,EST,0.25,-1}" -rate 2.0</pre></td>
+          </tr>
+          <tr>
+            <td>8K Lossy 12bit VBR HTJ2K</td>
+            <td><pre>kdu_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -fprec 12M Creversible=no Corder=RPCL Cblk="{32,128}" Cmodes=HT ORGtparts=R Clevels=7 ORGgen_tlm=8 Cprecincts="{256,256},{256,256},{256,256},{256,256},{256,256},{256,256},{256,256},{128,128}" Qfactor=95</pre></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <section id="sec-example-encoder-commands-openjph">
+      <h3><span class="heading-label"><span class="heading-number">I.3</span> </span>OpenJPH<a class="heading-link" href="#sec-example-encoder-commands-openjph">🔗</a></h3>
+      <p><a href="#bib-openjph">OpenJPH</a> is an open-source library that supports encoding and decoding JPEG 2000 Part-15 (HTJ2K) codestreams.</p>
+
+      <table id="table-encoder-ojph">
+        <caption><span class="heading-label">Table <span class="heading-number">I.3</span> — </span>Example JPEG 2000 Part-15 (HTJ2K) encoder commands for OpenJPH demo app <code>ojph_compress</code> version 0.21.2</caption>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Example Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HD 4:4:4 10bit Lossless</td>
+            <td><pre>ojph_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -reversible true -prog_order RPCL -block_size "{128,32}" -num_decomps 5 -tlm_marker true -precincts "{128,128},{256,256}" -tileparts R -bit_depth 10 </pre></td>
+          </tr>
+          <tr>
+            <td>4K 4:4:4 12bit Lossless</td>
+            <td><pre>ojph_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -reversible true -prog_order RPCL -block_size "{128,32}" -num_decomps 6 -tlm_marker true -precincts "{128,128},{256,256}" -tileparts R -bit_depth 12</pre></td>
+          </tr>
+          <tr>
+            <td>8K 4:4:4 12bit Lossless</td>
+            <td><pre>ojph_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -reversible true -prog_order RPCL -block_size "{128,32}" -num_decomps 7 -tlm_marker true -precincts "{128,128},{256,256}" -tileparts R -bit_depth 12</pre></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sec-example-encoder-commands-openjpeg">
+      <h3><span class="heading-label"><span class="heading-number">I.4</span> </span>OpenJPEG<a class="heading-link" href="#sec-example-encoder-commands-openjpeg">🔗</a></h3>
+      <p><a href="#bib-openjpeg">OpenJPEG</a> is an open-source library that supports encoding JPEG 2000 Part-1 codestreams and decoding JPEG 200 Part-1 and JPEG 2000 Part-15 (HTJ2K) codestreams.</p>
+
+      <table id="table-encoder-openjpeg">
+        <caption><span class="heading-label">Table <span class="heading-number">I.4</span> — </span>Example JPEG 2000 Part-1 encoder commands for OpenJPEG demo app <code>opj_compress</code> version 2.5.3</caption>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Example Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HD 4:4:4 10bit Lossless</td>
+            <td><pre>opj_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -TargetBitDepth 10 -IMF 2K_R,mainlevel=3,sublevel=0,framerate=24 </pre></td>
+          </tr>
+          <tr>
+            <td>4K 4:4:4 12bit Lossless</td>
+            <td><pre>opj_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -TargetBitDepth 12 -IMF 4K_R,mainlevel=6,sublevel=0,framerate=24</pre></td>
+          </tr>
+          <tr>
+            <td>8K 4:4:4 12bit Lossless</td>
+            <td><pre>opj_compress -i ${INPUT_TIF_FILE} -o ${OUTPUT_J2C_FILE} -TargetBitDepth 12 -IMF 8K_R,mainlevel=7,sublevel=0,framerate=24</pre></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </section>
+
+  <section id="sec-elements" class="unnumbered"><h2>Additional elements<a class="heading-link" href="#sec-elements">🔗</a></h2><p>The following are the non-prose elements of this document:</p>
+    <ol>
+      <li>
+        <span class="heading-label"><span class="heading-number">a</span>.</span> Consolidated Schema (informative). file: &lt;<a id="element-consolidated-schema" class="informative" title="Consolidated Schema" href="elements/st2067-21a-2023.xsd">st2067-21a-2023.xsd</a>&gt;.
+      </li>
+    </ol>
+  </section>
+
+    <section id="sec-bibliography" class="unnumbered"><h2>Bibliography<a class="heading-link" href="#sec-bibliography">🔗</a></h2>
+      <ul>
+        <li><cite id="bib-RP177">SMPTE RP 177:1993</cite>, Derivation of Basic Television Color Equations</li>
+
+        <li><cite id="bib-BT2035">Recommendation ITU-R BT.2035</cite>, A Reference Viewing Environment for Evaluation of HDTV Program Material or Completed Programmes</li>
+
+        <li><cite id="bib-H265">Recommendation ITU-T H.265 (11/2019)</cite>, High Efficiency Video Coding</li>
+
+        <li><cite id="bib-BT2390-8">Report ITU-R BT.2390-8</cite>, High dynamic range television for production and international programme exchange</li>
+
+        <li><cite id="bib-kakadu">Kakadu</cite>, commercial software library, <br>url:&nbsp;<a href="https://kakadusoftware.com/documentation-downloads/" class="ext-ref">https://kakadusoftware.com/documentation-downloads/</a></li>
+
+        <li><cite id="bib-openjph">OpenJPH</cite>, open source library, <br>url:&nbsp;<a href="https://github.com/aous72/OpenJPH" class="ext-ref">https://github.com/aous72/OpenJPH</a></li>
+
+        <li><cite id="bib-openjpeg">OpenJPEG</cite>, open source library, <br>url:&nbsp;<a href="https://www.openjpeg.org/" class="ext-ref">https://www.openjpeg.org/</a></li>
+
+      </ul>
+    </section>
+
+  
+</body></html>
