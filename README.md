@@ -4,7 +4,7 @@ _This repository is *public*._
 
 The [Committee Draft of SMPTE ST 2067-21 Interoperable Master Format — Application #2E](./index.html),
 including its [`st2067-21a-2020.xsd` element](st2067-21a-2023.xsd), is made available for
-a public review period ending no earlier than 2022-01-15, and no later than 2022-06-15.
+a public review period ending no earlier than 2025-07-01, and no later than 2025-12-01.
 
 Report issues at https://github.com/SMPTE/st2067-21/issues or at [35pm-chair@smpte.org](mailto:35pm-chair@smpte.org).
 
