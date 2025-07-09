@@ -3,6 +3,8 @@
 _This repository is *public*._
 
 ST 2067-71 and its st2067-21a-2023.xsd element, are made available in 35pm-st-2067-21-cd-2025-06-17-pub.zip for a public review period ending no earlier than 2025-07-01, and no later than 2025-12-01.
+- To view the document, download the ZIP file, extract the files, then open the index.html file in your browser.
+- The XSD file is located in the elements folder of the extracted ZIP file.
 
 Report issues at https://github.com/SMPTE/st2067-21/issues or at [35pm-chair@smpte.org](mailto:35pm-chair@smpte.org).
 
