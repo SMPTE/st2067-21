@@ -2,7 +2,7 @@
 
 _This repository is *public*._
 
-The Public CD of ST 2067-21 5th edition is made available in [35pm-st-2067-21-cd-2025-06-17-pub.zip](./35pm-st-2067-21-cd-2025-06-17-pub.zip) for a review period ending no earlier than 2025-07-01, and no later than 2025-12-01.
+The Public CD of ST 2067-21 5th edition is made available in 35pm-st-2067-21-cd-2025-06-17-pub.zip (available above) for a review period ending no earlier than 2025-07-01, and no later than 2025-12-01.
 
 Report issues at https://github.com/SMPTE/st2067-21/issues or at [35pm-chair@smpte.org](mailto:35pm-chair@smpte.org).
 
