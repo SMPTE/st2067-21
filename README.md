@@ -2,7 +2,7 @@
 
 _This repository is *public*._
 
-The Public CD of ST 2067-21 5th edition is made available in 35pm-st-2067-21-cd-2025-06-17-pub.zip (available above) for a review period ending no earlier than 2025-07-01, and no later than 2025-12-01.
+The Public Committee Draft (PCD) of ST 2067-21 5th edition is made available in 35pm-st-2067-21-cd-2025-06-17-pub.zip (available above) for a review period ending no earlier than 2025-07-01, and no later than 2025-12-01.
 - To view the document, download the ZIP file, extract the files, and open the HTML file in your browser.
 - An XSD file is also provided, located in the elements folder within the ZIP file.
 
